@@ -1,158 +1,346 @@
 <!DOCTYPE html>
-<!--[if lte IE 9]><html class="no-js is-ie"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class=no-js>
-<!--<![endif]-->
 
 <head>
+
     <meta charset="utf-8">
-    <meta name="description" content="Design First | A Designer and a Runtime for your applications.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="System Runtime is a JavaScript library that runs systems">
     <link rel="icon" href="img/favicon.ico">
+
     <title>Design First. Then Code.</title>
-    <link rel=stylesheet href="css/main.css">
-    <!--[if lte IE 8]>
-	<link rel=stylesheet href="css/ie.css">
-	<![endif]-->
-    <script src="js/modernizr.js"></script>
-    <script src="js/respond.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Prism -->
+    <link href="css/prism.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
-    <div class="level level-hero hero-home has-hint">
-        <div class="hero-overlay visible-lg"></div>
-        <video loop id=bg-video class=fullscreen-video>
-            <source src="video/appi.webm" type="video/webm">
-            <source src="video/appi.mp4" type="video/mp4">
-        </video>
-        <div class="container full-height">
-            <div class=v-align-parent>
-                <div class=v-center>
-                    <div class="row">
-                        <div class="col-xs-10 col-sm-6">
-                            <h1 class="mb-10 heading">Design First.<span>Then Code.</span></h1>
-                            <div class="subheading mb-20">We provide you tools to create applications
-                                <br class=hidden-xs>driven by your design.</div>
-                        </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Design First</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://system-designer.github.io">DESIGNER</a>
+                    </li>
+                    <li>
+                        <a href="https://system-runtime.github.io">RUNTIME</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/system-sdk">GITHUB</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Design First. Then Code.</h1>
+                        <h3>Create applications driven by your design</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://system-designer.github.io" class="btn btn-default btn-lg"><i class="fa fa-pencil-square-o fa-fw"></i> <span class="network-name">Design your app</span></a>
+                            </li>
+                            <li>
+                                <a href="https://system-runtime.github.io" class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Run your app</span></a>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <a class="btn btn-prepend" href="https://system-designer.github.io" target="_blank">
-                            <i class="prepended icon-append-play"></i>Start designing your application
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div class=hint-arrow></div>
+
         </div>
+        <!-- /.container -->
+
     </div>
-    <div class=level>
-        <div class="container mb-100 xs-mb-40">
-            <div class=row>
-                <div class="col-sm-5 col-md-4 col-md-offset-2 col-sm-offset-1">
-                    <h1 class="mb-10 xs-mb-10 heading color-dark heading-bordered">Design<br class=hidden-xs> Your App</h1>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <a name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Design your application</h2>
+                    <p class="lead" style="text-align:justify">
+                        Design is the base of every application. <a href="http://system-designer.github.io">System Designer</a> will help you to create JavaScript applications driven by your design.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        <a href="http://system-designer.github.io">System Designer</a> uses <a href="http://www.uml.org"
+                            target="_blank">UML</a>, a standard, to define your model. So you probably already know how to create
+                        a model in <a href="http://system-designer.github.io">System Designer</a> even if
+                        you have never run it.
+                    </p>
                 </div>
-                <div class="col-sm-5 col-sm-offset-1">
-                    <h2 class="w-300 color-dark mb-10 xs-mb-10">Think before coding</h2>
-                    <p class="xs-mw">Design is the base of every app. <br><a href="https://system-designer.github.io" target="_blank" style="color:#42A5F5">System Designer</a>                        will help you to create JavaScript applications driven by your design.
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/model.png" alt="">
                 </div>
             </div>
+
         </div>
-        <img src="img/system-designer.png" alt class="mb-80 hidden-xs iphone-inline">
-        <div class=container>
-            <div class="row mb-90 xs-mb-0">
-                <div class="col-sm-1 col-sm-offset-2">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">OPEN SOURCE</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-designer.github.io" target="_blank" style="color:#42A5F5">System Designer</a> is free and its source is under the <a href="http://www.apache.org/licenses/" target="_blank"
-                            style="color:#42A5F5">Apache License 2.0 license</a>.
-                </div>
-                <div class="col-sm-1">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">WEB IDE</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-designer.github.io" target="_blank" style="color:#42A5F5">System Designer</a> is a full web IDE with no server code.
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-sm-1 col-sm-offset-2">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">OFFLINE MODE</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-designer.github.io" target="_blank" style="color:#42A5F5">System Designer</a> includes an offline mode. You can design with no internet connection.
-                </div>
-                <div class="col-sm-1">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">GITHUB SYNC</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-designer.github.io" target="_blank" style="color:#42A5F5">System Designer</a> has a GitHub module to save your work remotely.
-                </div>
-            </div>
-        </div>
+        <!-- /.container -->
+
     </div>
-    <div class=level>
-        <div class="container mb-100 xs-mb-40">
-            <div class=row>
-                <div class="col-sm-5 col-md-4 col-md-offset-2 col-sm-offset-1">
-                    <h1 class="mb-10 xs-mb-10 heading color-dark heading-bordered">Run<br class=hidden-xs> Your App</h1>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Create components graphically</h2>
+                    <p class="lead" style="text-align:justify">
+                        There is no need to code to instantiate a component. Create a component in <a href="http://system-designer.github.io"
+                            >System Designer</a> is like creating a document in a NoSQL Database.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        In fact, <a href="http://system-designer.github.io">System Designer</a> acts as an
+                        ODM (Object-Document Mapper) to manage your components as NoSQL Documents.
+                    </p>
                 </div>
-                <div class="col-sm-5 col-sm-offset-1">
-                    <h2 class="w-300 color-dark mb-10 xs-mb-10">Save and run</h2>
-                    <p class="xs-mw">Once you have designed your application, run it with <a href="https://system-runtime.github.io" target="_blank"
-                            style="color:#42A5F5">System Runtime</a>, the runtime of your application.
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/components.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Manage your application</h2>
+                    <p class="lead" style="text-align:justify">
+                        Use NoSQL-like APIs to manage your components as NoSQL Documents.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        You can find, create, update, delete components like you do in a NoSQL Database.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-javascript">// find components
+Jedi.find({
+  'firstName': 'Luke'
+});
+
+// update components
+Jedi.update({
+  'firstName': 'Anakin'
+},{
+  'nickname': 'Dark Vador'
+});
+
+// remove components
+Jedi.remove({
+  'firstName': 'Anakin'
+});</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Bundle your application</h2>
+                    <p class="lead" style="text-align:justify">
+                        <a href="http://system-designer.github.io">System Designer</a> will bundle the model,
+                        components and methods of your application into a <a href="http://www.json.org" target="_blank">JSON</a>                        object. This <a href="http://www.json.org" target="_blank">JSON</a> can be then installed and started
+                        in a client or server application with <a href="http://system-runtime.github.io">System Runtime</a>.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        In fact, <a href="http://system-runtime.github.io">System Runtime</a> can create,
+                        install and start bundles like in <a href="https://www.osgi.org" target="_blank">OSGi</a>.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <pre class="line-numbers"><code class="language-json">{
+  "_id": "154cd18d0210516",
+  "name": "app",
+  "description": "",
+  "version": "0.0.1",
+  "schemas": {},
+  "models": {},
+  "types": {},
+  "behaviors": {
+    "1ea9c1d5f811ae1": {
+      "_id": "1ea9c1d5f811ae1",
+      "component": "154cd18d0210516",
+      "state": "start",
+      "action": "function start() {\n    console.log('Hello world !');\n}",
+      "useCoreAPI": false,
+      "core": false
+    }
+  },
+  "components": {}
+}</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Run your application</h2>
+                    <p class="lead" style="text-align:justify">
+                        Just add a link tag in your HTML to install your bundle into your client-side application. You can also install your bundle
+                        on <a href="https://nodejs.org/en/" target="_blank">Node.js</a> easily.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        You can also install many bundles, in that case all the bundles will be composed.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-markup">&lt;!-- on HTML -->
+&lt;link rel="system" href="app.json"></code></pre>
+                    <pre class="line-numbers"><code class="language-javascript">// on Node.js
+var runtime = require('system-runtime');
+
+// install your bundle
+var bundleId = runtime.install('app.json');
+
+// start your bundle
+runtime.start(bundleId);</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a name="contact"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6" style="margin-top:5px">
+                    <h2>Available on:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <button id="designer-mac-app-store" class="btn btn-lg btn-default" title="Download MacOS version"></button>
+                    <button id="designer-ios-app-store" class="btn btn-lg btn-default" title="Download iPad version"></button>
+                    <button id="designer-google-play-store" class="btn btn-lg btn-default" title="Download Android version"></button>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://system-designer.github.io">System Designer</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="https://system-runtime.github.io">System Runtime</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="https://github.com/system-sdk">Github</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">System Runtime is distributed under<a href="http://www.apache.org/licenses/" target="_blank"> Apache License 2.0</a>                        &sdot; Copyright &copy; 2016 <a href="https://twitter.com/ecarriou" target="_blank">Erwan Carriou</a></p>
                 </div>
             </div>
         </div>
-        <img src="img/runtime.png" alt class="mb-80 hidden-xs iphone-inline">
-        <div class=container>
-            <div class="row mb-90 xs-mb-0">
-                <div class="col-sm-1 col-sm-offset-2">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">TYPE CHECKING</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-runtime.github.io" target="_blank" style="color:#42A5F5">System Runtime</a> checks
-                        at runtime if the signatures of invoked methods are compliant with your design.
-                </div>
-                <div class="col-sm-1">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">MANAGE YOUR APPLICATION</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-runtime.github.io" target="_blank" style="color:#42A5F5">System Runtime</a> acts as an ODM (Object-Document Mapper) to manage your components as NoSQL Documents.
-                </div>
-            </div>
-            <div class=row>
-                <div class="col-sm-1 col-sm-offset-2">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">UNIVERSAL JAVASCRIPT</h3>
-                    <p class="smaller xs-mb-40 xs-mw">With <a href="https://system-runtime.github.io" target="_blank" style="color:#42A5F5">System Runtime</a> your application can be run server-side or client-side with no modification.
-                </div>
-                <div class="col-sm-1">
-                    <i class="icon icon-check"></i>
-                </div>
-                <div class="col-sm-3">
-                    <h3 class="mb-15">NO DEPENDENCY</h3>
-                    <p class="smaller xs-mb-40 xs-mw"><a href="https://system-runtime.github.io" target="_blank" style="color:#42A5F5">System Runtime</a> needs no configuration to work and depends on 0 library.
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer text-center">
-        <p>
-            System Designer and System Runtime are distributed under<a href="http://www.apache.org/licenses/" target="_blank">Apache License 2.0 license</a>-
-            copyright 2016 -<a href="https://twitter.com/ecarriou" target="_blank">Erwan Carriou</a>
-        </p>
-    </div>
-    <script src="js/jquery.min.js"></script>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+
+    <!-- Prism -->
+    <script src="js/prism.js"></script>
+
+    <script src="js/system-designer.js"></script>
+
 </body>
+
 </html>
