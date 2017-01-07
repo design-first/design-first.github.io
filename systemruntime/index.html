@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="System Runtime is a JavaScript library that runs systems">
+    <link rel="icon" href="img/favicon.ico">
+    <title>System Runtime | A JavaScript library that runs systems</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="../index.html">Design First</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://system-runtime.readme.io/docs">DOCUMENTATION</a>
+                    </li>
+                    <li>
+                        <a href="https://system-runtime.readme.io/reference">API</a>
+                    </li>
+                    <li>
+                        <a href="https://system-runtime.readme.io/blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="https://system-runtime.readme.io/discuss">SUPPORT</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/system-sdk/system-runtime">GITHUB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>System Runtime</h1>
+                        <h3>A JavaScript library that runs systems</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://system-runtime.readme.io/docs/quick-start" class="btn btn-default btn-lg"><i class="fa fa-book fa-fw"></i> <span class="network-name">Quick Start</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/system-sdk/system-runtime" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="services"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Define your components</h2>
+                    <p class="lead" style="text-align:justify">
+                        Defining a component in System Runtime is very simple, you do not have to code but just to define your model in a human readable
+                        format called <a href="https://system-runtime.readme.io/docs/design-your-model#section-mson"
+                            target="_blank">MSON</a>.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        With <a href="https://system-runtime.readme.io/docs/design-your-model#section-mson" target="_blank">MSON</a>                        you can define types, classes, one to one / one to many relationships and multi inheritance between
+                        classes.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-json">{
+    "_name": "Jedi",
+    "firstName": "property",
+    "lastName": "property",
+    "nickname": "property",
+    "father": "link",
+    "fullName": "method"
+}   </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Create your components</h2>
+                    <p class="lead" style="text-align:justify">Once your model is created, you will be able to get the classes of your model and create components based
+                        on your model.</p>
+                    <p class="lead" style="text-align:justify">Because you have defined a model for your application, a <a href="https://en.wikipedia.org/wiki/Type_system#DYNAMIC"
+                            target="_blank">Dynamic Type Check</a> is done on every action of your application. </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <pre class="line-numbers"><code class="language-javascript">// get your component class
+var Jedi = runtime.require('Jedi');
+
+// create components
+var luke = new Jedi({
+    'firstName': 'Luke',
+    'lastName': 'Skywalker'
+});
+
+var anakin = new Jedi({
+    'firstName': 'Anakin',
+    'lastName': 'Skywalker'
+});
+
+// add a link
+luke.father(anakin);
+
+// get the first name of luke father
+luke.father().firstName();</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Manage your components</h2>
+                    <p class="lead" style="text-align:justify">
+                        All your components are stored in System Runtime NoSQL Database. In fact, System Runtime acts as an ODM (Object-Document
+                        Mapper) to manage your components as NoSQL Documents.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        You can find, create, update, delete components like you do in a NoSQL Database.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-javascript">var Jedi = runtime.require('db')
+                  .collections()
+                  .Jedi;
+
+// find components
+Jedi.find({
+  'firstName': 'Luke'
+});
+
+// update components
+Jedi.update({
+  'firstName': 'Anakin'
+},{
+  'nickname': 'Dark Vador'
+});
+
+// remove components
+Jedi.remove({
+  'firstName': 'Anakin'
+});</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Bundle your components</h2>
+                    <p class="lead" style="text-align:justify">
+                        System Runtime can bundle the model, components and methods of your application into a <a href="http://www.json.org"
+                            target="_blank">JSON</a> object. This <a href="http://www.json.org" target="_blank">JSON</a> can
+                        be then installed and started in a client or server application.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        In fact, System Runtime can create, install and start bundles like in <a href="https://www.osgi.org"
+                            target="_blank">OSGi</a>.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <pre class="line-numbers"><code class="language-json">{
+  "_id": "154cd18d0210516",
+  "name": "app",
+  "description": "",
+  "version": "0.0.1",
+  "schemas": {},
+  "models": {},
+  "types": {},
+  "behaviors": {
+    "1ea9c1d5f811ae1": {
+      "_id": "1ea9c1d5f811ae1",
+      "component": "154cd18d0210516",
+      "state": "start",
+      "action": "function start() {\n    console.log('Hello world !');\n}",
+      "useCoreAPI": false,
+      "core": false
+    }
+  },
+  "components": {}
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Compose your components</h2>
+                    <p class="lead" style="text-align:justify">
+                        Just add a link tag in your HTML to install your bundle into your client-side application. You can also install your bundle
+                        on <a href="https://nodejs.org/en/" target="_blank">Node.js</a> easily.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        You can also install many bundles, in that case all the bundles will be composed.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-markup">&lt;!-- on HTML -->
+&lt;link rel="system" href="app.json"></code></pre>
+                    <pre class="line-numbers"><code class="language-javascript">// on Node.js
+var runtime = require('system-runtime');
+
+// install and start your bundle
+runtime.install('app.json');</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="contact"></a>
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Design graphically your components:</h2>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="../systemdesigner/index.html" class="btn btn-default btn-lg"><i></i> <span class="network-name">Learn more about System Designer</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://system-runtime.readme.io">Documentation</a>
+                        </li>
+                        <li class="footer-menu-divider">-</li>
+                        <li>
+                            <a href="https://github.com/system-sdk/system-runtime">Github</a>
+                        </li>
+                        <li class="footer-menu-divider">-</li>
+                        <li>
+                            <a href="https://gitter.im/system-sdk/system-runtime">Gitter</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">System Runtime is distributed under<a href="http://www.apache.org/licenses/" target="_blank"> Apache License 2.0</a>                        - Copyright &copy; 2017 <a href="https://twitter.com/ecarriou" target="_blank">Erwan Carriou</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
