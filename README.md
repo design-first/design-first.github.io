@@ -1,6 +1,6 @@
 # Design First website
 
-## Licence
+## License
 
 ### System Designer website template
 
