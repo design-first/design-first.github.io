@@ -2,7 +2,7 @@
 
 ## Licence
 
-### System Designer website
+### System Designer website template
 
 The MIT License (MIT)
 
