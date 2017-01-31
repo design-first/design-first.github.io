@@ -169,6 +169,14 @@ p.copyright {
     margin: 15px 0 0;
 }
 
+#designer-windows-store {
+	background-image: url(../img/English_Get_it_Win_10_InvariantCulture_Default.png);
+	height: 40px;
+	width: 111px;
+	background-repeat: no-repeat;
+    margin: 5px;
+}
+
 #designer-mac-app-store {
 	background-image: url(../img/Download_on_the_Mac_App_Store_Badge_US-UK_165x40.svg);
 	height: 40px;

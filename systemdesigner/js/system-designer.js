@@ -3,6 +3,10 @@ jQuery(document).ready(function ($) {
 		window.open('./designer');
 	})
 
+	$('#designer-windows-store').on('click', function () {
+		window.open('https://www.microsoft.com/store/apps/9p05jrx99h87');
+	})
+
 	$('#designer-mac-app-store').on('click', function () {
 		window.open('https://itunes.apple.com/us/app/system-designer/id1102494854?l=fr&ls=1&mt=12');
 	})
