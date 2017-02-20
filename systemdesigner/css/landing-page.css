@@ -202,6 +202,15 @@ p.copyright {
     margin: 5px;
 }
 
+#designer-chrome-web-store {
+	background-image: url(../img/ChromeWebStore_Badge_v2_206x58.png);
+	height: 58px;
+	width: 206px;
+	background-repeat: no-repeat;
+	border: 0px;
+    margin: 5px;
+}
+
 .navbar-brand {
   background-image: url(../img/logo.png);
   background-repeat: no-repeat;

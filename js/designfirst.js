@@ -19,4 +19,8 @@ jQuery(document).ready(function ($) {
 		window.open('https://play.google.com/store/apps/details?id=com.ecarriou.systemdesignerios');
 	})
 
+	$('#designer-chrome-web-store').on('click', function () {
+		window.open('https://chrome.google.com/webstore/detail/system-designer/fcicbiibnlniocelaiimkajlcpnnceoo');
+	})
+
 });
