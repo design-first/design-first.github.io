@@ -73,92 +73,89 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Design your application</h2>
-                    <p class="lead" style="text-align:justify"> Design is the base of every application. <a href="./systemdesigner/">System Designer</a> will help you to create JavaScript
-applications driven by your design.
-</p>
-<p class="lead" style="text-align:justify">
-<a href="./systemdesigner/">System Designer</a> uses <a href="http://www.uml.org" target="_blank">UML</a>, a standard, to
-define your model. So you probably already know how to create a model in <a href="./systemdesigner/">System Designer</a> even
-if you have never run it.
-</p>
-</div>
-<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-    <img class="img-responsive" src="img/model.png" alt="">
-</div>
-</div>
-</div>
-</div>
-<div class="content-section-b">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Create components graphically</h2>
-                <p class="lead" style="text-align:justify"> There is no need to code to instantiate a component. Create a component in <a href="./systemdesigner/">System Designer</a> is
-like creating a document in a NoSQL Database.
-</p>
-<p class="lead" style="text-align:justify"> In fact, <a href="./systemdesigner/">System Designer</a> acts as an ODM (Object-Document Mapper) to manage your components
-as NoSQL Documents.
-</p>
-</div>
-<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-    <img class="img-responsive" src="img/components.png" alt="">
-</div>
-</div>
-</div>
-</div>
-<div class="content-section-a">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Manage your application</h2>
-                <p class="lead" style="text-align:justify"> Use NoSQL-like APIs to manage your components as NoSQL Documents.
-</p>
-<p class="lead" style="text-align:justify"> You can find, create, update, delete components like you do in a NoSQL Database.
-</p>
-</div>
-<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-    <pre class="line-numbers"><code class="language-javascript">// find components
-Jedi.find({
-  'firstName': 'Luke'
-});
-
-// update components
-Jedi.update({
-  'firstName': 'Anakin'
-},{
-  'nickname': 'Dark Vador'
-});
-
-// remove components
-Jedi.remove({
-  'firstName': 'Anakin'
-});</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="content-section-b">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Bundle your application</h2>
-                <p class="lead" style="text-align:justify">
-<a href="./systemdesigner/">System Designer</a> will bundle the model, components and methods of your application into a
-<a href="http://www.json.org" target="_blank">JSON</a> object. This <a href="http://www.json.org" target="_blank">JSON</a> can
-be then installed and started in a client or server application with <a href="./systemruntime/">System Runtime</a>.
-</p>
-<p class="lead" style="text-align:justify"> In fact, <a href="./systemruntime/">System Runtime</a> can create, install and start bundles like in
-<a href="https://www.osgi.org" target="_blank">OSGi</a>.
-</p>
-</div>
-<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-    <pre class="line-numbers"><code class="language-json">{
+                    <p class="lead" style="text-align:justify"> Design is the base of every application. <a href="./systemdesigner/">System Designer</a> will help you
+                        to create JavaScript applications driven by your design.
+                    </p>
+                    <p class="lead" style="text-align:justify">
+                        <a href="./systemdesigner/">System Designer</a> uses <a href="http://www.uml.org" target="_blank">UML</a>,
+                        a standard, to define your model. So you probably already know how to create a model in <a href="./systemdesigner/">System Designer</a>                        even if you have never run it.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/model.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Create components graphically</h2>
+                    <p class="lead" style="text-align:justify"> There is no need to code to instantiate a component. Create a component in <a href="./systemdesigner/">System Designer</a>                        is like creating a document in a NoSQL Database.
+                    </p>
+                    <p class="lead" style="text-align:justify"> In fact, <a href="./systemdesigner/">System Designer</a> acts as an ODM (Object-Document Mapper) to manage
+                        your components as NoSQL Documents.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/components.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Code the behavior of your model</h2>
+                    <p class="lead" style="text-align:justify">Once you have created your model, System Designer generates the skeletons of all your methods. You only
+                        have to add your code to implement them.</p>
+                    <p class="lead" style="text-align:justify">System Designer provides you helpers to manage your components. You can easily navigate threw components
+                        to create your application.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-javascript">function fullName() {
+	var result = '';
+	
+	// for each properties a method
+	// is created to set / get the value property
+	result = this.firstName() + ' ' + this.lastName();
+	
+	// a dynamic type check is done 
+	// to validate that inputs and ouput
+	// are compliant with the model  
+	return result;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Bundle your application</h2>
+                    <p class="lead" style="text-align:justify">
+                        <a href="./systemdesigner/">System Designer</a> will bundle the model, components and methods of
+                        your application into a
+                        <a href="http://www.json.org" target="_blank">JSON</a> object. This
+                        <a href="http://www.json.org"
+                            target="_blank">JSON</a> can be then installed and started in a client or server application with <a href="./systemruntime/">System Runtime</a>.
+                    </p>
+                    <p class="lead" style="text-align:justify"> In fact, <a href="./systemruntime/">System Runtime</a> can create, install and start bundles like in
+                        <a href="https://www.osgi.org" target="_blank">OSGi</a>.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <pre class="line-numbers"><code class="language-json">{
   "_id": "154cd18d0210516",
   "name": "app",
   "description": "",
@@ -178,77 +175,77 @@ be then installed and started in a client or server application with <a href="./
   },
   "components": {}
 }</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="content-section-a">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Run your application</h2>
-                <p class="lead" style="text-align:justify"> Just add a link tag in your HTML to install your bundle into your client-side application. You can also install your bundle
-on <a href="https://nodejs.org/en/" target="_blank">Node.js</a> easily.
-</p>
-<p class="lead" style="text-align:justify"> You can also install many bundles, in that case all the bundles will be composed.
-</p>
-</div>
-<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-    <pre class="line-numbers"><code class="language-markup">&lt;!-- on HTML -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Run your application</h2>
+                    <p class="lead" style="text-align:justify"> Just add a link tag in your HTML to install your bundle into your client-side application. You can also
+                        install your bundle on <a href="https://nodejs.org/en/" target="_blank">Node.js</a> easily.
+                    </p>
+                    <p class="lead" style="text-align:justify"> You can also install many bundles, in that case all the bundles will be composed.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <pre class="line-numbers"><code class="language-markup">&lt;!-- on HTML -->
 &lt;link rel="system" href="app.json"></code></pre>
-    <pre class="line-numbers"><code class="language-javascript">// on Node.js
+                    <pre class="line-numbers"><code class="language-javascript">// on Node.js
 var runtime = require('system-runtime');
 
 // install and start your bundle
 runtime.install('app.json');</code></pre>
-</div>
-</div>
-</div>
-</div>
-<a name="contact"></a>
-<div class="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5" style="margin-top:5px">
-<h2>Available on:</h2>
-</div>
-<div class="col-lg-7">
-    <button id="designer-windows-store" class="btn btn-lg btn-default" title="Download Windows 10 version"></button>
-    <button id="designer-mac-app-store" class="btn btn-lg btn-default" title="Download MacOS version"></button>
-    <button id="designer-ios-app-store" class="btn btn-lg btn-default" title="Download iOS version"></button>
-    <button id="designer-google-play-store" class="btn btn-lg btn-default" title="Download Android version"></button>
-    <button id="designer-chrome-web-store" class="btn btn-lg btn-default" title="Go to Chrome version"></button>
-    <button id="designer-html5-version" class="btn btn-lg btn-default" title="Go to HTML5 version"><a href="./designer/">
-<img src="./img/html5-badge-h-solo.png" width="37" height="37" alt="Go to HTML5 version" title="Go to HTML5 version">
-</a></button>
-</div>
-</div>
-</div>
-</div>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <li>
-                        <a href="./systemdesigner/">System Designer</a>
-                    </li>
-                    <li class="footer-menu-divider">-</li>
-                    <li>
-                        <a href="./systemruntime/">System Runtime</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">System Designer and System Runtime are distributed under<a href="http://www.apache.org/licenses/" target="_blank"> Apache License 2.0</a>                    - Copyright &copy; 2017 <a href="https://www.linkedin.com/in/ecarriou" target="_blank">Erwan Carriou</a></p>
+                </div>
             </div>
         </div>
     </div>
-</footer>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script src="js/designfirst.js"></script>
+    <a name="contact"></a>
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5" style="margin-top:5px">
+                    <h2>Available on:</h2>
+                </div>
+                <div class="col-lg-7">
+                    <button id="designer-windows-store" class="btn btn-lg btn-default" title="Download Windows 10 version"></button>
+                    <button id="designer-mac-app-store" class="btn btn-lg btn-default" title="Download MacOS version"></button>
+                    <button id="designer-ios-app-store" class="btn btn-lg btn-default" title="Download iOS version"></button>
+                    <button id="designer-google-play-store" class="btn btn-lg btn-default" title="Download Android version"></button>
+                    <button id="designer-chrome-web-store" class="btn btn-lg btn-default" title="Go to Chrome version"></button>
+                    <button id="designer-html5-version" class="btn btn-lg btn-default" title="Go to HTML5 version"><a href="./designer/">
+<img src="./img/html5-badge-h-solo.png" width="37" height="37" alt="Go to HTML5 version" title="Go to HTML5 version">
+</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="./systemdesigner/">System Designer</a>
+                        </li>
+                        <li class="footer-menu-divider">-</li>
+                        <li>
+                            <a href="./systemruntime/">System Runtime</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">System Designer and System Runtime are distributed under<a href="http://www.apache.org/licenses/" target="_blank"> Apache License 2.0</a>                        - Copyright &copy; 2017 <a href="https://www.linkedin.com/in/ecarriou" target="_blank">Erwan Carriou</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/designfirst.js"></script>
 </body>
 
 </html>
