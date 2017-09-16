@@ -110,9 +110,16 @@
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                   <pre class="line-numbers"><code class="language-javascript">function fullName() {
-  let result = this.firstName() + ' ' +
-               this.lastName();
-               
+  let result = '';
+  
+  // for each property a method
+  // is created to set / get its value
+  result = this.firstName() + ' ' + 
+          this.lastName();
+          
+  // a dynamic type check is done 
+  // to validate that inputs and ouput
+  // are compliant with the model  
   return result;
 }</code></pre>
                 </div>
