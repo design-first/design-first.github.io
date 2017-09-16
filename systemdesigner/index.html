@@ -11,6 +11,7 @@
     <link href="css/landing-page.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/googlefonts.css" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -108,7 +109,12 @@
                     </p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/behavior.png" alt="">
+                  <pre class="line-numbers"><code class="language-javascript">function fullName() {
+  let result = this.firstName() + ' ' +
+               this.lastName();
+               
+  return result;
+}</code></pre>
                 </div>
             </div>
         </div>
@@ -246,6 +252,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/system-designer.js"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>
