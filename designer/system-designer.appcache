@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# version 1.9.9.1
+# version 2.0.0
  
 CACHE:
-app.html
+app/index.html
 behavior.html
 component.html
 index.html
@@ -10,23 +10,16 @@ model.html
 schema.html
 system.html
 type.html
-styles/behavior.min.css
-styles/component.min.css
-styles/designer.min.css
-styles/model.min.css
-styles/schema.min.css
-styles/system.min.css
-styles/type.min.css
-scripts/behavior.min.js
-scripts/component.min.js
-scripts/designer.min.js
-scripts/model.min.js
-scripts/schema.min.js
-scripts/system.min.js
-scripts/type.min.js
-scripts/designer-runtime.min.js
+styles/editor.css
+styles/system-designer.css
 systems/designer-runtime.json
-systems/design.json
+systems/system-designer.json
+systems/editor-behavior.json
+systems/editor-component.json
+systems/editor-model.json
+systems/editor-schema.json
+systems/editor-system.json
+systems/editor-type.json
 img/favicon.ico
 img/logo.png
 lib/ace/ace.js
