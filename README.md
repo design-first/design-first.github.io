@@ -1,6 +1,6 @@
 # Design First website
 
-## License
+## Licenses
 
 ### System Designer website template
 
@@ -41,3 +41,10 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. 
+
+## Images
+
+Photos by:
+* [Ant Rozetsky](https://unsplash.com/@rozetsky) on [Unsplash](https://unsplash.com)
+* [Green Chameleon](https://unsplash.com/@craftedbygc) on [Unsplash](https://unsplash.com)
+* [Sergey Zolkin](https://unsplash.com/@szolkin) on [Unsplash](https://unsplash.com)
