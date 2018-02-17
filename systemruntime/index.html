@@ -123,15 +123,15 @@
         </div>
         <div class="col-lg-5 col-sm-pull-6  col-sm-6">
           <pre class="line-numbers"><code class="language-javascript">// get your component class
-let Jedi = runtime.require('Jedi');
+const Jedi = runtime.require('Jedi');
 
 // create components
-let luke = new Jedi({
+const luke = new Jedi({
   'firstName': 'Luke',
   'lastName': 'Skywalker'
 });
 
-let anakin = new Jedi({
+const anakin = new Jedi({
   'firstName': 'Anakin',
   'lastName': 'Skywalker'
 });
@@ -159,7 +159,7 @@ luke.father().firstName();</code></pre>
           </p>
         </div>
         <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-          <pre class="line-numbers"><code class="language-javascript">let Jedi = runtime.require('db')
+          <pre class="line-numbers"><code class="language-javascript">const Jedi = runtime.require('db')
                   .collections()
                   .Jedi;
 
@@ -242,7 +242,7 @@ Jedi.remove({
           <pre class="line-numbers"><code class="language-markup">&lt;!-- on HTML -->
 &lt;link rel="system" href="system.json"></code></pre>
           <pre class="line-numbers"><code class="language-javascript">// on Node.js
-let runtime = require('system-runtime');
+const runtime = require('system-runtime');
 
 // install and start your bundle
 runtime.install('system.json');</code></pre>
