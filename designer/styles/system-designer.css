@@ -312,6 +312,12 @@ body,
   min-width: 300px;
   margin-bottom: 20px;
 }
+@media (max-width: 968px) {
+  .placeholder {
+    min-width: 260px;
+  }
+}
+
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
