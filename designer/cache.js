@@ -41,7 +41,9 @@ self.addEventListener('install', function (e) {
         'lib/prism/prism.css',
         'lib/system-runtime/system-runtime.min.js',
         'lib/designer/vendor.js',
-        'lib/editor/vendor.js'
+        'lib/editor/vendor.js',
+        'manifest.json',
+        'img/icon.png'
       ]).then(() => self.skipWaiting());
     })
   );
