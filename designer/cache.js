@@ -1,3 +1,5 @@
+// System Designer - Copyright 2018 Erwan Carriou
+// Licensed under the Apache License, Version 2.0 (the "License")
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open('systemdesignerv2.6.2').then(function (cache) {
@@ -12,7 +14,7 @@ self.addEventListener('install', function (e) {
         'system.html',
         'type.html',
         'styles/editor.css',
-        'styles/system-designer.css',
+        'styles/designer.css',
         'systems/designer-runtime.json',
         'systems/system-designer.json',
         'systems/editor-behavior.json',
