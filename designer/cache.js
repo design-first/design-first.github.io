@@ -1,7 +1,7 @@
 // System Designer - Copyright 2018 Erwan Carriou
 // Licensed under the Apache License, Version 2.0 (the "License")
 
-const version = 'v2.8.3';
+const version = 'v2.9.0';
 
 const clearCaches = () => {
   return caches.keys().then(keys => {
@@ -27,8 +27,10 @@ self.addEventListener('install', e => {
         'schema.html',
         'system.html',
         'type.html',
+        'diagram.html',
         'styles/editor.css',
         'styles/designer.css',
+        'styles/diagram.css',
         'systems/designer-runtime.json',
         'systems/system-designer.json',
         'systems/editor-behavior.json',
@@ -37,6 +39,7 @@ self.addEventListener('install', e => {
         'systems/editor-schema.json',
         'systems/editor-system.json',
         'systems/editor-type.json',
+        'systems/diagram.json',
         'img/favicon.ico',
         'img/logo.png',
         'lib/ace/ace.js',
@@ -58,6 +61,7 @@ self.addEventListener('install', e => {
         'lib/system-runtime/system-runtime.min.js',
         'lib/designer/vendor.js',
         'lib/editor/vendor.js',
+        'lib/diagram/vendor.js',
         'manifest.json',
         'img/icon.png'
       ]).then(() => self.skipWaiting());

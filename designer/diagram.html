@@ -5,15 +5,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="An IDE for designing systems">
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover' name='viewport'
+  />
   <link rel="icon" href="img/favicon.ico">
-  <title>schema · system </title>
+  <title>class diagram · system </title>
   <!-- bootstrap -->
   <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- editor  styles -->
-  <link href="styles/editor.css" rel="stylesheet">
+  <link href="styles/diagram.css" rel="stylesheet">
   <!-- editor system -->
-  <link href="systems/editor-schema.json" type="application/json" rel="system">
+  <link href="systems/diagram.json" type="application/json" rel="system">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
       <div class="row">
         <!-- toolbar -->
         <div class="col-sm-3 col-md-2 sidebar">
-           <!-- toolbar items -->
+          <!-- toolbar items -->
           <ul id="designer-toolbar-items" class="nav nav-sidebar"></ul>
         </div>
       </div>
@@ -44,14 +45,11 @@
     <div id="designer-dialog"></div>
     <!-- message -->
     <div id="designer-message"></div>
-    <!-- editor -->
-    <div id="designer-editor"></div>
+    <!-- diagram -->
+    <div id="designer-diagram"></div>
   </div>
-  <!-- ace -->
-  <script type="text/javascript" charset="utf-8" src="lib/ace/ace.js"></script>
-  <script type="text/javascript" charset="utf-8" src="lib/ace/ext-language_tools.js"></script>
   <!-- lib -->
-  <script src="lib/editor/vendor.js"></script>
+  <script src="lib/diagram/vendor.js"></script>
 </body>
 
 </html>
