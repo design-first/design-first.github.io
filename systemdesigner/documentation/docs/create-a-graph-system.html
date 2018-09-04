@@ -173,7 +173,7 @@
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"z1747d12e621e92f"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"IS_FRIEND_WITH"</span>,
   <span class="hljs-attr">"_inherit"</span>: [
-  <span class="hljs-string">"Relationships"</span>
+    <span class="hljs-string">"Relationships"</span>
   ],
   <span class="hljs-attr">"since"</span>: <span class="hljs-string">"property"</span>
 }
@@ -279,4 +279,20 @@
 </ul>
 <p><img src="../img/create-a-graph-11.png" alt="Image Alt"></p>
 <p>You see now the relations between all your nodes components.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemdesigner/documentation/docs/generate-a-model-from-a-json-file.html">← Generate a model from a JSON file</a><a class="docs-next button" href="/systemdesigner/documentation/docs/articles-about-the-project.html">Articles about the project →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-graph-system">Create a Graph system</a></li><li><a href="#create-the-nodes-models">Create the nodes models</a></li><li><a href="#create-the-relationships-models">Create the relationships models</a></li><li><a href="#create-the-nodes-components">Create the nodes components</a></li><li><a href="#create-the-relationships-components">Create the relationships components</a></li><li><a href="#view-the-graph-model">View the Graph model</a></li><li><a href="#view-the-component-model">View the Component model</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="make-requests-on-your-graph"></a><a href="#make-requests-on-your-graph" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Make requests on your graph</h2>
+<p>To query your graph system you will need to use the NoSQL repository APIs.For example, you can add on the <strong>start</strong> method of your system:</p>
+<pre><code class="hljs css languages- js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'logger'</span>).info(
+    <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'db'</span>).collections().HAS_READ.find({
+      <span class="hljs-string">'outgoing'</span>: {
+        <span class="hljs-string">'$eq'</span>: <span class="hljs-string">'GraphDatabase'</span>
+      }
+    }).length
+  );
+}
+</code></pre>
+<p>It will give the number of person that have read <code>GraphDatabase</code> book.</p>
+<blockquote>
+<p>You can see <a href="https://designfirst.io/systemruntime/documentation/docs/document-collection.html">here</a> a list of available APIs to request your system.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemdesigner/documentation/docs/generate-a-model-from-a-json-file.html">← Generate a model from a JSON file</a><a class="docs-next button" href="/systemdesigner/documentation/docs/articles-about-the-project.html">Articles about the project →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-graph-system">Create a Graph system</a></li><li><a href="#create-the-nodes-models">Create the nodes models</a></li><li><a href="#create-the-relationships-models">Create the relationships models</a></li><li><a href="#create-the-nodes-components">Create the nodes components</a></li><li><a href="#create-the-relationships-components">Create the relationships components</a></li><li><a href="#view-the-graph-model">View the Graph model</a></li><li><a href="#view-the-component-model">View the Component model</a></li><li><a href="#make-requests-on-your-graph">Make requests on your graph</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
