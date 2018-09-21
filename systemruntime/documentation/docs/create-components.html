@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create components · System Runtime</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Lets say we create a *Person* class:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create components · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="Lets say we create a *Person* class:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links-website.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,8 +31,8 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create components</h1></header><article><div><span><p>Lets say we create a <em>Person</em> class:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create components</h1></header><article><div><span><p>Lets say we create a <em>Person</em> class:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 
 metamodel.schema(<span class="hljs-string">'Person'</span>, {
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
@@ -39,7 +43,7 @@ metamodel.schema(<span class="hljs-string">'Person'</span>, {
 metamodel.create();
 </code></pre>
 <p>To use it, we just need to <strong>require</strong> it by its name:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
 </code></pre>
 <p>If we look at the object returned by the require, we notice that:</p>
 <ul>
@@ -49,7 +53,7 @@ metamodel.create();
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="creating-an-instance"></a><a href="#creating-an-instance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating an instance</h2>
 <p>Now lets create a component:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> jean = <span class="hljs-keyword">new</span> Person({
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> jean = <span class="hljs-keyword">new</span> Person({
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'Jean'</span>,
   <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'Valjean'</span>
 });
@@ -76,7 +80,7 @@ metamodel.create();
 <p>The result is <em>undefined</em> because we did not yet define its <strong>behavior</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="implementing-methods"></a><a href="#implementing-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementing methods</h2>
 <p>We can use the <strong>on</strong> method on the <em>Person</em> class to add behaviors to a method.</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
 
 Person.on(<span class="hljs-string">'getFullName'</span>, () =&gt; <span class="hljs-keyword">this</span>.firstName() + <span class="hljs-string">' '</span> + <span class="hljs-keyword">this</span>.lastName());
 </code></pre>
@@ -84,7 +88,7 @@ Person.on(<span class="hljs-string">'getFullName'</span>, () =&gt; <span class="
 <p><img src="../img/DFQNMaFRzCrDcTUYpQK3_console6.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="implementing-events"></a><a href="#implementing-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementing events</h2>
 <p>Components can also have events, <strong>they are defined at schema level</strong>.</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
  
 metamodel.schema(<span class="hljs-string">'Person'</span>, {
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
@@ -103,12 +107,12 @@ metamodel.model(<span class="hljs-string">'Person'</span>, {
 metamodel.create();
 </code></pre>
 <p>In our example, we launch an event in a method:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> Person = runtime.require(<span class="hljs-string">'Person'</span>);
 
 Person.on(<span class="hljs-string">'swim'</span>, () =&gt; <span class="hljs-keyword">this</span>.doSport());
 </code></pre>
 <p>Then we listen to it:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> jean = <span class="hljs-keyword">new</span> Person({
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> jean = <span class="hljs-keyword">new</span> Person({
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'jean'</span>, 
   <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'Valjean'</span>
 });
@@ -130,12 +134,12 @@ jean.swim();
 <p>All is done internally by a <strong>worflow engine</strong>.</p>
 <p>You can listen to a property change or a collection change (i.e. add/remove item).</p>
 <p>Example, do something when <em>firstName</em> changed:</p>
-<pre><code class="hljs css languages- js">Person.on(<span class="hljs-string">'firstName'</span>, name =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the new value of firstName is '</span> + name));
+<pre><code class="hljs css language-js">Person.on(<span class="hljs-string">'firstName'</span>, name =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'the new value of firstName is '</span> + name));
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="defining-inheritance"></a><a href="#defining-inheritance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining inheritance</h2>
 <p>In System Runtime, <strong>inheritance is defined in schema</strong>. You do not have to code.</p>
 <p>Lets say we want to create a <em>Teacher</em> class that inherits from a <em>Person</em> class:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 
 <span class="hljs-comment">// create Person class</span>
 metamodel.schema(<span class="hljs-string">'Person'</span>, {
@@ -196,7 +200,7 @@ eikichi.getFullName();
 <ul>
 <li>For a <strong>one to one relationship</strong>, use <em>link</em> value:</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 
 metamodel.schema(<span class="hljs-string">'Jedi'</span>, {
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
@@ -227,7 +231,7 @@ luke.father().firstName();
 <ul>
 <li>For a <strong>one to many relationship</strong>, use <em>collection</em> value. The collection will behave like an <em>array</em>. That collection can only accept components of class defined in the schema.</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-comment">// create the model</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// create the model</span>
 <span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 
 metamodel.schema(<span class="hljs-string">'Jedi'</span>, {
@@ -270,5 +274,5 @@ padme.children(<span class="hljs-number">1</span>).firstName();
 <li>for implementing methods, we need to add <strong>behaviors</strong> and</li>
 <li>System  Runtime accepts <strong>multi-inheritance</strong>, <strong>one to one</strong> and <strong>one to many relationships</strong> between components.</li>
 </ul>
-<p>In the a next article, we will see <a href="/systemruntime/documentation/docs/manage-your-components.html">how System Runtime manages these components</a>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/design-your-model.html">← Design your model</a><a class="docs-next button" href="/systemruntime/documentation/docs/manage-your-components.html">Manage your components →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-an-instance">Creating an instance</a></li><li><a href="#implementing-methods">Implementing methods</a></li><li><a href="#implementing-events">Implementing events</a></li><li><a href="#listening-to-a-change-of-state">Listening to a change of state</a></li><li><a href="#defining-inheritance">Defining inheritance</a></li><li><a href="#defining-relationships-between-components">Defining relationships between components</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+<p>In the a next article, we will see [how System Runtime manages these components](Manage your components.md).</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/design-your-model.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/manage-your-components.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#creating-an-instance">Creating an instance</a></li><li><a href="#implementing-methods">Implementing methods</a></li><li><a href="#implementing-events">Implementing events</a></li><li><a href="#listening-to-a-change-of-state">Listening to a change of state</a></li><li><a href="#defining-inheritance">Defining inheritance</a></li><li><a href="#defining-relationships-between-components">Defining relationships between components</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>

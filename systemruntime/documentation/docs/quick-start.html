@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · System Runtime</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quick Start · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links-website.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Quick Start</h1></header><article><div><span><p>In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime.</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Quick Start</h1></header><article><div><span><p>In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime.</p>
 <h2><a class="anchor" aria-hidden="true" id="what-is-a-system"></a><a href="#what-is-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a system ?</h2>
 <p>With System Runtime you create in fact <strong>a system</strong> and not an application. But what is a system ?</p>
 <p>A system:</p>
@@ -39,7 +43,7 @@
 <p><img src="../img/fa7f5de-6565096-UuhkIYCaRY6IpUFVFY7Q_system.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="install-system-runtime"></a><a href="#install-system-runtime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install System Runtime</h2>
 <p>To install System Runtime server-side, you juste need to use npm:</p>
-<pre><code class="hljs css languages- shell">npm install system-runtime --save
+<pre><code class="hljs css language-shell">npm install system-runtime --save
 </code></pre>
 <blockquote>
 <p>Learn more about Node.js</p>
@@ -48,19 +52,19 @@
 <h2><a class="anchor" aria-hidden="true" id="create-a-system"></a><a href="#create-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a system</h2>
 <p>Create a file in which you will write the code (example: <em>system.js</em>).
 Then we can require System Runtime and use its APIs:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
 </code></pre>
 <p>The first thing you have to do is to create a <em>system</em> that represents your application:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> system = runtime.system(<span class="hljs-string">'mySystem'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> system = runtime.system(<span class="hljs-string">'mySystem'</span>);
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="create-a-model"></a><a href="#create-a-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a model</h2>
 <p>We will create a <em>Jedi</em> class:</p>
 <p><img src="../img/0GW9Z1mJT0q8ZTeAAvPs_Jedi.png" alt="Image Alt"></p>
 <p>To do so, get <em>metamodel</em> component to create your model:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 </code></pre>
 <p>Define your model:</p>
-<pre><code class="hljs css languages- js">metamodel.schema(<span class="hljs-string">'Jedi'</span>, {
+<pre><code class="hljs css language-js">metamodel.schema(<span class="hljs-string">'Jedi'</span>, {
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
   <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'property'</span>,
   <span class="hljs-string">'nickname'</span>: <span class="hljs-string">'property'</span>,
@@ -69,14 +73,14 @@ Then we can require System Runtime and use its APIs:</p>
 });
 </code></pre>
 <p>Now we have define the model, we can create it:</p>
-<pre><code class="hljs css languages- js">metamodel.create();
+<pre><code class="hljs css language-js">metamodel.create();
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="create-components"></a><a href="#create-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create components</h2>
 <p>Once the model is created, you can require the classes of your model:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> Jedi = runtime.require(<span class="hljs-string">'Jedi'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> Jedi = runtime.require(<span class="hljs-string">'Jedi'</span>);
 </code></pre>
 <p>Now let's start creating some components:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">new</span> Jedi({
+<pre><code class="hljs css language-js"><span class="hljs-keyword">new</span> Jedi({
   <span class="hljs-string">'_id'</span>: <span class="hljs-string">'anakin'</span>,
   <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'Anakin'</span>,
   <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'Skywalker'</span>,
@@ -97,12 +101,12 @@ Then we can require System Runtime and use its APIs:</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="add-behaviors-to-your-components"></a><a href="#add-behaviors-to-your-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add behaviors to your components</h2>
 <p>In System Runtime, implementing a method is called <em>adding a behavior</em>. So now we will add a behavior to the <em>shout</em> method of <em>Jedi</em> class:</p>
-<pre><code class="hljs css languages- js">Jedi.on(<span class="hljs-string">'shout'</span>, message =&gt; message + <span class="hljs-string">'!!'</span>);
+<pre><code class="hljs css language-js">Jedi.on(<span class="hljs-string">'shout'</span>, message =&gt; message + <span class="hljs-string">'!!'</span>);
 </code></pre>
 <p>Adding a behavior is like adding an event to an object. In fact It is the case: you add a behavior to the <em>Jedi</em> class when the <em>shout</em> method is called.</p>
 <h2><a class="anchor" aria-hidden="true" id="code-your-system-s-logic"></a><a href="#code-your-system-s-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code your system's logic</h2>
 <p>Once the model, components, and behaviors of your components have been defined, you can now start to code your system's logic.</p>
-<pre><code class="hljs css languages- js">system.on(<span class="hljs-string">'start'</span>, () =&gt; {
+<pre><code class="hljs css language-js">system.on(<span class="hljs-string">'start'</span>, () =&gt; {
   <span class="hljs-keyword">const</span> luke = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'luke'</span>);
 
   <span class="hljs-keyword">if</span> (luke.father().nickname() === <span class="hljs-string">'Darth Vader'</span>) {
@@ -117,17 +121,17 @@ Then we can require System Runtime and use its APIs:</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="start-the-system"></a><a href="#start-the-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start the system</h2>
 <p>To start the system, just call the <em>start</em> method of your system:</p>
-<pre><code class="hljs css languages- js">system.start();
+<pre><code class="hljs css language-js">system.start();
 </code></pre>
 <p>Now execute your file and see the result:</p>
-<pre><code class="hljs css languages- shell">node system.js
+<pre><code class="hljs css language-shell">node system.js
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="bundle-the-system"></a><a href="#bundle-the-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bundle the system</h2>
 <p>To bundle the system, just call the <em>bundle</em> method:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-built_in">console</span>.log( runtime.bundle() );
+<pre><code class="hljs css language-js"><span class="hljs-built_in">console</span>.log( runtime.bundle() );
 </code></pre>
 <p>Now execute your file:</p>
-<pre><code class="hljs css languages- json">{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"r1f6761e91912e85"</span>,<span class="hljs-attr">"name"</span>:<span class="hljs-string">"mySystem"</span>,<span class="hljs-attr">"description"</span>:<span class="hljs-string">""</span>,<span class="hljs-attr">"version"</span>:<span class="hljs-string">"0.0.1"</span>,<span class="hljs-attr">"master"</span>:<span class="hljs-literal">true</span>,<span class="hljs-attr">"schemas"</span>:{<span class="hljs-attr">"n1d69a151891dabe"</span>:{<span class="hljs-attr">"_name"</span>:<span class="hljs-string">"Jedi"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">"link"</span>,<span class="hljs-attr">"shout"</span>:<span class="hljs-string">"method"</span>,<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"n1d69a151891dabe"</span>,<span class="hljs-attr">"_inherit"</span>:[<span class="hljs-string">"_Component"</span>]}},<span class="hljs-attr">"models"</span>:{},<span class="hljs-attr">"types"</span>:{},<span class="hljs-attr">"behaviors"</span>:{<span class="hljs-attr">"w10c7d1e4301e137"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"w10c7d1e4301e137"</span>,<span class="hljs-attr">"component"</span>:<span class="hljs-string">"Jedi"</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-string">"shout"</span>,<span class="hljs-attr">"action"</span>:<span class="hljs-string">"(message) =&gt; message + '!!'"</span>,<span class="hljs-attr">"useCoreAPI"</span>:<span class="hljs-literal">false</span>,<span class="hljs-attr">"core"</span>:<span class="hljs-literal">false</span>},<span class="hljs-attr">"g140591769d11852"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"g140591769d11852"</span>,<span class="hljs-attr">"component"</span>:<span class="hljs-string">"r1f6761e91912e85"</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-string">"start"</span>,<span class="hljs-attr">"action"</span>:<span class="hljs-string">"() =&gt; {\n  const luke = this.require('luke');\n\n  if (luke.father().nickname() === 'Darth Vader') {\n    console.log(luke.shout('NOOOOOO'));\n  }\n}"</span>,<span class="hljs-attr">"useCoreAPI"</span>:<span class="hljs-literal">false</span>,<span class="hljs-attr">"core"</span>:<span class="hljs-literal">false</span>}},<span class="hljs-attr">"components"</span>:{<span class="hljs-attr">"Jedi"</span>:{<span class="hljs-attr">"anakin"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"anakin"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"Anakin"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"Skywalker"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">"Darth Vader"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">""</span>},<span class="hljs-attr">"luke"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"luke"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"Luke"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"Skywalker"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">"anakin"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">""</span>}}}}
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"r1f6761e91912e85"</span>,<span class="hljs-attr">"name"</span>:<span class="hljs-string">"mySystem"</span>,<span class="hljs-attr">"description"</span>:<span class="hljs-string">""</span>,<span class="hljs-attr">"version"</span>:<span class="hljs-string">"0.0.1"</span>,<span class="hljs-attr">"master"</span>:<span class="hljs-literal">true</span>,<span class="hljs-attr">"schemas"</span>:{<span class="hljs-attr">"n1d69a151891dabe"</span>:{<span class="hljs-attr">"_name"</span>:<span class="hljs-string">"Jedi"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">"property"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">"link"</span>,<span class="hljs-attr">"shout"</span>:<span class="hljs-string">"method"</span>,<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"n1d69a151891dabe"</span>,<span class="hljs-attr">"_inherit"</span>:[<span class="hljs-string">"_Component"</span>]}},<span class="hljs-attr">"models"</span>:{},<span class="hljs-attr">"types"</span>:{},<span class="hljs-attr">"behaviors"</span>:{<span class="hljs-attr">"w10c7d1e4301e137"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"w10c7d1e4301e137"</span>,<span class="hljs-attr">"component"</span>:<span class="hljs-string">"Jedi"</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-string">"shout"</span>,<span class="hljs-attr">"action"</span>:<span class="hljs-string">"(message) =&gt; message + '!!'"</span>,<span class="hljs-attr">"useCoreAPI"</span>:<span class="hljs-literal">false</span>,<span class="hljs-attr">"core"</span>:<span class="hljs-literal">false</span>},<span class="hljs-attr">"g140591769d11852"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"g140591769d11852"</span>,<span class="hljs-attr">"component"</span>:<span class="hljs-string">"r1f6761e91912e85"</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-string">"start"</span>,<span class="hljs-attr">"action"</span>:<span class="hljs-string">"() =&gt; {\n  const luke = this.require('luke');\n\n  if (luke.father().nickname() === 'Darth Vader') {\n    console.log(luke.shout('NOOOOOO'));\n  }\n}"</span>,<span class="hljs-attr">"useCoreAPI"</span>:<span class="hljs-literal">false</span>,<span class="hljs-attr">"core"</span>:<span class="hljs-literal">false</span>}},<span class="hljs-attr">"components"</span>:{<span class="hljs-attr">"Jedi"</span>:{<span class="hljs-attr">"anakin"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"anakin"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"Anakin"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"Skywalker"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">"Darth Vader"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">""</span>},<span class="hljs-attr">"luke"</span>:{<span class="hljs-attr">"_id"</span>:<span class="hljs-string">"luke"</span>,<span class="hljs-attr">"firstName"</span>:<span class="hljs-string">"Luke"</span>,<span class="hljs-attr">"lastName"</span>:<span class="hljs-string">"Skywalker"</span>,<span class="hljs-attr">"father"</span>:<span class="hljs-string">"anakin"</span>,<span class="hljs-attr">"nickname"</span>:<span class="hljs-string">""</span>}}}}
 </code></pre>
 <p>As you see, all your code has been bundled in a JSON object.</p>
 <blockquote>
@@ -137,29 +141,29 @@ Then we can require System Runtime and use its APIs:</p>
 <h2><a class="anchor" aria-hidden="true" id="install-a-bundle-server-side"></a><a href="#install-a-bundle-server-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle server-side</h2>
 <p>Copy the JSON you get from the bundle and copy it in a file (<em>system.json</em> for example).
 Create a new file (<em>import.js</em> for example) and start the bundle like this:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
 
 <span class="hljs-comment">// install and start the bundle</span>
 runtime.install(<span class="hljs-string">'system.json'</span>);
 </code></pre>
 <p>Now execute your file:</p>
-<pre><code class="hljs css languages- shell">node import.js
+<pre><code class="hljs css language-shell">node import.js
 </code></pre>
 <p>System Runtime will install the bundle. The <em>start</em> method of the system will be called when the bundle will be installed.</p>
 <h2><a class="anchor" aria-hidden="true" id="install-a-bundle-client-side"></a><a href="#install-a-bundle-client-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle client-side</h2>
 <p>Copy the JSON you get from the bundle and copy it in a file (<em>system.json</em> for example).
 Then add this <em>link</em> tag in your HTML to install the bundle:</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"system.json"</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"system.json"</span>&gt;</span>
 </code></pre>
 <p>Then add this <em>script</em> tag in your HTML to install <em>System Runtime</em>:</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime@3.0.0/dist/system-runtime.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime@3.0.0/dist/system-runtime.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <p>System Runtime will install the bundle on the load of the page. The <em>start</em> method of the system will be called when the bundle will be installed.</p>
 <p>Run the page and look at the console of your browser:</p>
 <p><img src="../img/Ge9QsuHQTm6WpoZPMfiw_console-result.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="use-system-runtime-nosql-apis"></a><a href="#use-system-runtime-nosql-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use System Runtime NoSQL APIs</h2>
 <p>Now type in the console:</p>
-<pre><code class="hljs css languages- js">runtime.require(<span class="hljs-string">'db'</span>).collections().Jedi.count();
+<pre><code class="hljs css language-js">runtime.require(<span class="hljs-string">'db'</span>).collections().Jedi.count();
 </code></pre>
 <p>System Runtime stores all the component you create in its database. So the result of this script will be <strong>2</strong> because we have created 2 <em>Jedi</em> components.</p>
 <blockquote>
@@ -167,5 +171,5 @@ Then add this <em>link</em> tag in your HTML to install the bundle:</p>
 <p>The APIs to query the database are mongoDB-like, so it is very easy to learn them.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
-<p>Now that you have finished the quick start, you can go on learning System Runtime: let's <a href="/systemruntime/documentation/docs/design-your-model.html">design your model</a>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/overview.html">← Overview</a><a class="docs-next button" href="/systemruntime/documentation/docs/install-system-runtime.html">How to install System Runtime →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-a-system">What is a system ?</a></li><li><a href="#install-system-runtime">Install System Runtime</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#create-a-model">Create a model</a></li><li><a href="#create-components">Create components</a></li><li><a href="#add-behaviors-to-your-components">Add behaviors to your components</a></li><li><a href="#code-your-system-s-logic">Code your system's logic</a></li><li><a href="#start-the-system">Start the system</a></li><li><a href="#bundle-the-system">Bundle the system</a></li><li><a href="#install-a-bundle-server-side">Install a bundle server-side</a></li><li><a href="#install-a-bundle-client-side">Install a bundle client-side</a></li><li><a href="#use-system-runtime-nosql-apis">Use System Runtime NoSQL APIs</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+<p>Now that you have finished the quick start, you can go on learning System Runtime: let's [design your model](Design your model.md).</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/overview.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/install-system-runtime.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#what-is-a-system">What is a system ?</a></li><li><a href="#install-system-runtime">Install System Runtime</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#create-a-model">Create a model</a></li><li><a href="#create-components">Create components</a></li><li><a href="#add-behaviors-to-your-components">Add behaviors to your components</a></li><li><a href="#code-your-system-s-logic">Code your system's logic</a></li><li><a href="#start-the-system">Start the system</a></li><li><a href="#bundle-the-system">Bundle the system</a></li><li><a href="#install-a-bundle-server-side">Install a bundle server-side</a></li><li><a href="#install-a-bundle-client-side">Install a bundle client-side</a></li><li><a href="#use-system-runtime-nosql-apis">Use System Runtime NoSQL APIs</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Bundle your components · System Runtime</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In System Runtime you can share the components you have created with other systems."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Bundle your components · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="In System Runtime you can share the components you have created with other systems."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links-website.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Bundle your components</h1></header><article><div><span><p>In System Runtime you can share the components you have created with other systems.</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Bundle your components</h1></header><article><div><span><p>In System Runtime you can share the components you have created with other systems.</p>
 <h2><a class="anchor" aria-hidden="true" id="system"></a><a href="#system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System</h2>
 <p>When you create an application in System Runtime, you are in fact defining a <strong>system</strong>. A system is composed of:</p>
 <ul>
@@ -48,7 +52,7 @@
 <h2><a class="anchor" aria-hidden="true" id="create-a-system"></a><a href="#create-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a system</h2>
 <p>First you need to create a system. By default, there is no system in your application, so you have to create one in order to take advantage of System Runtime.</p>
 <p>To create your system, call method <strong>system</strong> of <em>Runtime</em> instance:</p>
-<pre><code class="hljs css languages- js">runtime.system(<span class="hljs-string">'mysystem'</span>);
+<pre><code class="hljs css language-js">runtime.system(<span class="hljs-string">'mysystem'</span>);
 </code></pre>
 <p>The method returns the <em>System</em> instance that is created. Now everything you code will be in this system.</p>
 <h2><a class="anchor" aria-hidden="true" id="structure-your-code"></a><a href="#structure-your-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structure your code</h2>
@@ -62,7 +66,7 @@
 <li>step 6: <strong>run the system</strong></li>
 </ul>
 <p>By respecting these steps, you insure that System Runtime will be able to bundle your system with your start code.</p>
-<pre><code class="hljs css languages- js"><span class="hljs-comment">// STEP 1</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// STEP 1</span>
 <span class="hljs-keyword">const</span> system = runtime.system(<span class="hljs-string">'mySystem'</span>);
 
 <span class="hljs-comment">// STEP 2</span>
@@ -112,10 +116,10 @@ system.start();
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="bundle-a-system"></a><a href="#bundle-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bundle a system</h2>
 <p>To bundle your system, you just need to call the method <strong>bundle</strong> of <em>Runtime</em> instance:</p>
-<pre><code class="hljs css languages- js">runtime.bundle();
+<pre><code class="hljs css language-js">runtime.bundle();
 </code></pre>
 <p>The result of the bundle will be a stringify JSON that represents your system:</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"r1f6761e91912e85"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"mySystem"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
@@ -187,7 +191,7 @@ system.start();
 <p>Now that we have bundled our system, we want to install it. There are many ways to do it.</p>
 <h2><a class="anchor" aria-hidden="true" id="install-a-bundle-server-side"></a><a href="#install-a-bundle-server-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle server-side</h2>
 <p>To install a bundle server-side, just call the method <strong>install</strong> of <em>Runtime</em> instance and pass the name of your system as parameter.</p>
-<pre><code class="hljs css languages- js"><span class="hljs-comment">// install and start the system</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// install and start the system</span>
 runtime.install(<span class="hljs-string">'mysystem.json'</span>);
 </code></pre>
 <blockquote>
@@ -196,18 +200,18 @@ runtime.install(<span class="hljs-string">'mysystem.json'</span>);
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="install-a-bundle-client-side-with-javascript"></a><a href="#install-a-bundle-client-side-with-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle client-side with JavaScript</h2>
 <p>To install a bundle client-side:</p>
-<pre><code class="hljs css languages- js">runtime.install(<span class="hljs-string">'mysystem.json'</span>);
+<pre><code class="hljs css language-js">runtime.install(<span class="hljs-string">'mysystem.json'</span>);
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="install-a-bundle-client-side-with-html"></a><a href="#install-a-bundle-client-side-with-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle client-side with HTML</h2>
 <p>To do so, save the bundled system in a JSON file and then install it with a <em>link</em> tag. The <em>start</em> method of the system will be called when the system will be imported.</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mysystem.json"</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mysystem.json"</span>&gt;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="package-a-bundle"></a><a href="#package-a-bundle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Package a bundle</h2>
 <p>Packaging a bundle means to compose a system with System Runtime core systems. By doing that System Runtime library will include your system (i.e. your code will be include in <em>system-runtime.min.js</em> file).</p>
 <p>You can package your system with System Runtime. To do so you need first to <a href="https://github.com/design-first/system-runtime">clone the repository</a>.</p>
 <p>Save the bundled system in a JSON file and put it on the <a href="https://github.com/design-first/system-runtime/tree/master/addons">addons directory of System Runtime</a>.</p>
 <p>Then build System Runtime with :</p>
-<pre><code class="hljs css languages- shell">npm run build
+<pre><code class="hljs css language-shell">npm run build
 </code></pre>
 <p>The system will be automatically composed in <em>System Runtime core system</em> and System Runtime will execute the start function of the imported system when <em>ready</em>.</p>
 <h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
@@ -218,5 +222,5 @@ runtime.install(<span class="hljs-string">'mysystem.json'</span>);
 <li>you can <strong>bundle a systems</strong>,</li>
 <li>you can <strong>install/compose systems</strong> with another.</li>
 </ul>
-<p>In a next article we will discuss on <a href="/systemruntime/documentation/docs/extend-system-runtime.html">how to extend System Runtime</a>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/manage-your-components.html">← Manage your components</a><a class="docs-next button" href="/systemruntime/documentation/docs/extend-system-runtime.html">Extend System Runtime →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system">System</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#structure-your-code">Structure your code</a></li><li><a href="#bundle-a-system">Bundle a system</a></li><li><a href="#install-a-bundle">Install a bundle</a></li><li><a href="#install-a-bundle-server-side">Install a bundle server-side</a></li><li><a href="#install-a-bundle-client-side-with-javascript">Install a bundle client-side with JavaScript</a></li><li><a href="#install-a-bundle-client-side-with-html">Install a bundle client-side with HTML</a></li><li><a href="#package-a-bundle">Package a bundle</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+<p>In a next article we will discuss on [how to extend System Runtime](Extend System Runtime.md).</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/manage-your-components.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/extend-system-runtime.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#system">System</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#structure-your-code">Structure your code</a></li><li><a href="#bundle-a-system">Bundle a system</a></li><li><a href="#install-a-bundle">Install a bundle</a></li><li><a href="#install-a-bundle-server-side">Install a bundle server-side</a></li><li><a href="#install-a-bundle-client-side-with-javascript">Install a bundle client-side with JavaScript</a></li><li><a href="#install-a-bundle-client-side-with-html">Install a bundle client-side with HTML</a></li><li><a href="#package-a-bundle">Package a bundle</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
