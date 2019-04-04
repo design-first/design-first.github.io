@@ -37,7 +37,6 @@ lib/prism/prism.css
 lib/system-runtime/system-runtime.min.js
 lib/designer/vendor.js
 lib/editor/vendor.js
-lib/diagram/vendor.js
 manifest.json
 
 NETWORK:
