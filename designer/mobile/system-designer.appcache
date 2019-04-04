@@ -39,7 +39,6 @@ lib/designer/vendor.js
 lib/editor/vendor.js
 lib/diagram/vendor.js
 manifest.json
-img/icon.png
 
 NETWORK:
 *
