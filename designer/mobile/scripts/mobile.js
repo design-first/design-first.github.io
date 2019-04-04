@@ -18,10 +18,6 @@
  * limitations under the License.
  */
 
-if (typeof window.cordova !== undefined) {
-  window.cordova = {};
-}
-
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
