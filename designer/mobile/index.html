@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" manifest="system-designer.appcache">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="An IDE for designing systems">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover' name='viewport' />
+  <title>System Designer</title>
+  <!-- bootstrap -->
+  <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- prism -->
+  <link href="lib/prism/prism.css" rel="stylesheet">
+  <!-- designer -->
+  <link href="styles/designer.css" rel="stylesheet">
+  <!-- cordova -->
+  <link href="styles/mobile.css" rel="stylesheet">
+</head>
+
+<body id="body">
+  <!-- menubar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- menu header -->
+      <div id="designer-menubar-header" class="navbar-header"></div>
+      <div>
+        <!-- menu items -->
+        <ul id="designer-menubar-items" class="nav navbar-nav"></ul>
+        <!-- menu actions -->
+        <ul id="designer-menubar-actions" class="nav navbar-nav navbar-right hidden-xs"></ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <!-- toobar -->
+      <div class="col-xs-1 col-sm-1 sidebar">
+        <!-- toolbar items -->
+        <ul id="designer-toolbar-items" class="nav nav-sidebar"></ul>
+      </div>
+      <div class="col-xs-offset-1 col-sm-offset-1 col-xs-8 col-sm-9 main">
+        <!-- dialogs -->
+        <div id="designer-dialog"></div>
+        <!-- message -->
+        <div id="designer-message"></div>
+        <!-- workspace -->
+        <div id="designer-workspace" class="placeholders"></div>
+      </div>
+      <!-- spaces -->
+      <div id="designer-spaces" class="col-xs-3 col-sm-2">
+        <div id="designer-spaces-spaces-system" class="sidebar-module sidebar-module-inset">
+          <p id="designer-spaces-system-header" class="designer-spaces-header"></p>
+          <ul id="designer-spaces-system-items" class="nav"></ul>
+        </div>
+        <div class="sidebar-module sidebar-module-inset">
+          <p id="designer-spaces-type" class="designer-spaces-header"></p>
+          <ul id="designer-spaces-items" class="nav"></ul>
+        </div>
+        <div id="designer-spaces-spaces-components" class="sidebar-module sidebar-module-inset">
+          <p id="designer-spaces-components-header" class="designer-spaces-header"></p>
+          <ul id="designer-spaces-components-items" class="nav"></ul>
+        </div>
+        <div class="sidebar-module sidebar-module-inset help">
+          <p class="designer-spaces-header">Help</p>
+          <p id="designer-spaces-help" class="designer-spaces-help-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- cordova -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="scripts/mobile.js"></script>
+  <!-- lib -->
+  <script src="lib/designer/vendor.js"></script>
+  <!-- designer -->
+  <script type="text/javascript" src="scripts/system-designer.js"></script>
+</body>
+
+</html>
