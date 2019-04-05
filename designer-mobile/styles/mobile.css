@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
- .designer-system-menu-export {
+.designer-system-menu-export {
   display: none!important;
 }
 #designer-dialog-config-client-type-debugging {
@@ -176,7 +176,7 @@ span.glyphicon.glyphicon-menu-left {
 
 /* Phablet */
 @media only screen 
-and (max-width : 1000px) {
+and (max-width : 800px) {
   #designer-toolbar-item-extension {
     display: none;
   }
