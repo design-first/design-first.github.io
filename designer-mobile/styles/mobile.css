@@ -84,6 +84,9 @@ span.glyphicon.glyphicon-menu-left {
       position: absolute;
       right: -20px;
     }
+    #designer-message {
+      width: 200px;
+    }
   }
 
 /* iPhone 6 / 7 / 8 */
