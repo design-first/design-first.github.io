@@ -58,6 +58,10 @@ span.glyphicon.glyphicon-menu-left {
   user-select: none;
 }
 
+#designer-message {
+  width: 200px!important;
+}
+
 /* iPhone 5 / 5S / SE */
 @media only screen 
   and (max-width: 600px)
@@ -83,9 +87,6 @@ span.glyphicon.glyphicon-menu-left {
     .log-number {
       position: absolute;
       right: -20px;
-    }
-    #designer-message {
-      width: 200px;
     }
   }
 
