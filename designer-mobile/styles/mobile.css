@@ -91,6 +91,9 @@ span.glyphicon.glyphicon-menu-left {
 /* iPhone 6 / 7 / 8 */
 @media only screen 
   and (max-width : 667px) {
+    body {
+      font-size: 12px!important;
+    }
     .list-group.designer-library {
       max-height:130px;
     }
