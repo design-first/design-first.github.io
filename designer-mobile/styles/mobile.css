@@ -58,14 +58,9 @@ span.glyphicon.glyphicon-menu-left {
   user-select: none;
 }
 
-#designer-message {
-  width: 200px!important;
-}
-
 /* iPhone 5 / 5S / SE */
 @media only screen 
-  and (max-width: 600px)
-  and (orientation: landscape) {
+  and (max-width: 600px) {
     .btn-group-lg>.btn, .btn-lg {
       padding-top: 5px!important;
     }
@@ -88,12 +83,14 @@ span.glyphicon.glyphicon-menu-left {
       position: absolute;
       right: -20px;
     }
+    #designer-message {
+      width: 200px!important;
+    }
   }
 
 /* iPhone 6 / 7 / 8 */
 @media only screen 
-  and (max-width : 667px) 
-  and (orientation : landscape) {
+  and (max-width : 667px) {
     .list-group.designer-library {
       max-height:130px;
     }
@@ -114,8 +111,7 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 6+ / 7+ / 8+ */
 @media only screen 
-  and (max-width : 736px) 
-  and (orientation : landscape) {
+  and (max-width : 736px) {
     .list-group.designer-library {
       max-height:150px;
     }
@@ -180,8 +176,7 @@ span.glyphicon.glyphicon-menu-left {
 
 /* Phablet */
 @media only screen 
-and (max-width : 1000px) 
-and (orientation : landscape) {
+and (max-width : 1000px) {
   #designer-toolbar-item-extension {
     display: none;
   }
