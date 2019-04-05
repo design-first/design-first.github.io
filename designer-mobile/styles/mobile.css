@@ -59,7 +59,11 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 5 / 5S / SE */
 @media only screen 
-  and (max-width: 600px) {
+  and (max-width: 600px)
+  and (orientation: landscape) {
+    .btn-group-lg>.btn, .btn-lg {
+      padding-top: 5px!important;
+    }
     .container {
       padding-right: 70px!important;
     }
@@ -83,7 +87,8 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 6 / 7 / 8 */
 @media only screen 
-  and (max-width : 667px) {
+  and (max-width : 667px) 
+  and (orientation : landscape) {
     .list-group.designer-library {
       max-height:130px;
     }
@@ -104,7 +109,8 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 6+ / 7+ / 8+ */
 @media only screen 
-  and (max-width : 736px) {
+  and (max-width : 736px) 
+  and (orientation : landscape) {
     .list-group.designer-library {
       max-height:150px;
     }
@@ -123,7 +129,8 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 375px) 
   and (device-height : 812px) 
-  and (-webkit-device-pixel-ratio : 3) { 
+  and (-webkit-device-pixel-ratio : 3) 
+  and (orientation : landscape) { 
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -138,7 +145,8 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 414px) 
   and (device-height : 896px) 
-  and (-webkit-device-pixel-ratio : 2) {
+  and (-webkit-device-pixel-ratio : 2) 
+  and (orientation : landscape) {
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -153,7 +161,8 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 414px) 
   and (device-height : 896px) 
-  and (-webkit-device-pixel-ratio : 3) {
+  and (-webkit-device-pixel-ratio : 3)
+  and (orientation : landscape) {
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
