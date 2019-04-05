@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
- .designer-system-menu-export {
+.designer-system-menu-export {
   display: none!important;
 }
 #designer-dialog-config-client-type-debugging {
@@ -59,10 +59,16 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 5 / 5S / SE */
 @media only screen 
-  and (max-width: 600px)
-  and (orientation: landscape) {
-    body {
+  and (max-width: 600px) {
+    body,
+    .navbar-fixed-top,
+    .navbar-fixed-bottom {
+      min-width: 550px!important;
       font-size: 12px!important;
+    }
+    .navbar-nav > li > a {
+      padding-left: 5px;
+      padding-right: 5px;
     }
     .btn-group-lg>.btn, .btn-lg {
       padding-top: 5px!important;
@@ -90,8 +96,7 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 6 / 7 / 8 */
 @media only screen 
-  and (max-width : 667px) 
-  and (orientation : landscape) {
+  and (max-width : 667px) {
     .list-group.designer-library {
       max-height:130px;
     }
@@ -112,8 +117,7 @@ span.glyphicon.glyphicon-menu-left {
 
 /* iPhone 6+ / 7+ / 8+ */
 @media only screen 
-  and (max-width : 736px) 
-  and (orientation : landscape) {
+  and (max-width : 736px) {
     .list-group.designer-library {
       max-height:150px;
     }
@@ -132,8 +136,7 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 375px) 
   and (device-height : 812px) 
-  and (-webkit-device-pixel-ratio : 3) 
-  and (orientation : landscape) { 
+  and (-webkit-device-pixel-ratio : 3) { 
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -148,8 +151,7 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 414px) 
   and (device-height : 896px) 
-  and (-webkit-device-pixel-ratio : 2) 
-  and (orientation : landscape) {
+  and (-webkit-device-pixel-ratio : 2) {
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -164,8 +166,7 @@ span.glyphicon.glyphicon-menu-left {
 @media only screen 
   and (device-width : 414px) 
   and (device-height : 896px) 
-  and (-webkit-device-pixel-ratio : 3)
-  and (orientation : landscape) {
+  and (-webkit-device-pixel-ratio : 3) {
     body,
     .navbar-fixed-top,
     .navbar-fixed-bottom {
@@ -175,37 +176,6 @@ span.glyphicon.glyphicon-menu-left {
       display: none;
     } 
   }
-
-/* small screens */
-@media only screen
-and (max-width : 750px)
-and (orientation: landscape) {
-  body {
-    font-size: 12px!important;
-  }
-  .btn-group-lg>.btn, .btn-lg {
-    padding-top: 6px!important;
-  }
-  .container {
-    padding-right: 70px!important;
-  }
-  .list-group.designer-library {
-    max-height:130px!important;
-  }
-  #designer-toolbar-item-search {
-    display: none;
-  }
-  #designer-toolbar-item-command {
-    display: none;
-  }
-  #designer-toolbar-item-extension {
-    display: none;
-  }
-  .log-number {
-    position: absolute;
-    right: -20px;
-  }
-}
 
 /* Phablet */
 @media only screen 
