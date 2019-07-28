@@ -79,12 +79,14 @@
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
           <h2 class="section-heading">Create your system</h2>
-          <p class="lead" style="text-align:justify"> Creating a system in System Runtime is very simple, you do not have to code but just to define its model in a human
+          <p class="lead" style="text-align:justify"> Creating a system in System Runtime is very simple, you do not
+            have to code but just to define its model in a human
             readable format called
             <a href="./documentation/docs/en/design-your-model#defining-your-model" target="_blank">MSON</a>.
           </p>
           <p class="lead" style="text-align:justify"> With
-            <a href="./documentation/docs/en/design-your-model#defining-your-model" target="_blank">MSON</a> you can define types, classes, one to one / one to many relationships and multi inheritance between
+            <a href="./documentation/docs/en/design-your-model#defining-your-model" target="_blank">MSON</a> you can
+            define types, classes, one to one / one to many relationships and multi inheritance between
             classes.
           </p>
         </div>
@@ -107,11 +109,13 @@
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
           <h2 class="section-heading">Create your components</h2>
-          <p class="lead" style="text-align:justify">Once your model is created, you will be able to get the classes of your model and create components based on your
+          <p class="lead" style="text-align:justify">Once your model is created, you will be able to get the classes of
+            your model and create components based on your
             model.
           </p>
           <p class="lead" style="text-align:justify">Because you have defined a model for your system, a
-            <a href="https://en.wikipedia.org/wiki/Type_system#DYNAMIC" target="_blank">Dynamic Type Check</a> is done on every action of your system. </p>
+            <a href="https://en.wikipedia.org/wiki/Type_system#DYNAMIC" target="_blank">Dynamic Type Check</a> is done
+            on every action of your system. </p>
         </div>
         <div class="col-lg-5 col-sm-pull-6  col-sm-6">
           <pre class="line-numbers"><code class="language-javascript">// get your component class
@@ -144,10 +148,12 @@ luke.father().firstName();</code></pre>
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
           <h2 class="section-heading">Manage your components</h2>
-          <p class="lead" style="text-align:justify"> All your components are stored in System Runtime NoSQL Database. In fact, System Runtime acts as an ODM (Object-Document
+          <p class="lead" style="text-align:justify"> All your components are stored in System Runtime NoSQL Database.
+            In fact, System Runtime acts as an ODM (Object-Document
             Mapper) to manage your components as NoSQL Documents.
           </p>
-          <p class="lead" style="text-align:justify"> You can find, create, update, delete components like you do in a NoSQL Database.
+          <p class="lead" style="text-align:justify"> You can find, create, update, delete components like you do in a
+            NoSQL Database.
           </p>
         </div>
         <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -182,11 +188,14 @@ Jedi.remove({
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
           <h2 class="section-heading">Bundle your system</h2>
-          <p class="lead" style="text-align:justify"> System Runtime can bundle the model, components and methods of your system into a
+          <p class="lead" style="text-align:justify"> System Runtime can bundle the model, components and methods of
+            your system into a
             <a href="https://www.json.org" target="_blank">JSON</a> object. This
-            <a href="https://www.json.org" target="_blank">JSON</a> can be then installed and started client-side or server-side.
+            <a href="https://www.json.org" target="_blank">JSON</a> can be then installed and started client-side or
+            server-side.
           </p>
-          <p class="lead" style="text-align:justify"> In fact, System Runtime can create, install and start bundles like in
+          <p class="lead" style="text-align:justify"> In fact, System Runtime can create, install and start bundles like
+            in
             <a href="https://www.osgi.org" target="_blank">OSGi</a>.
           </p>
         </div>
@@ -222,11 +231,13 @@ Jedi.remove({
           <hr class="section-heading-spacer">
           <div class="clearfix"></div>
           <h2 class="section-heading">Compose your systems</h2>
-          <p class="lead" style="text-align:justify"> Just add a link tag in your HTML to install your bundle into your client-side application. You can also install
+          <p class="lead" style="text-align:justify"> Just add a link tag in your HTML to install your bundle into your
+            client-side application. You can also install
             your bundle on
             <a href="https://nodejs.org/en/" target="_blank">Node.js</a> easily.
           </p>
-          <p class="lead" style="text-align:justify"> You can also install many bundles, in that case all the bundles will be composed.
+          <p class="lead" style="text-align:justify"> You can also install many bundles, in that case all the bundles
+            will be composed.
           </p>
         </div>
         <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -265,10 +276,25 @@ runtime.install('system.json');</code></pre>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
+          <ul class="list-inline">
+            <li>
+              <a href="../index.html">Design First</a>
+            </li>
+            <li class="footer-menu-divider">-</li>
+            <li>
+              <a href="../systemdesigner/">System Designer</a>
+            </li>
+            <li class="footer-menu-divider">-</li>
+            <li>
+              <p>System Runtime</p>
+            </li>
+          </ul>
           <p class="copyright text-muted small">System Runtime is distributed under
             <a href="./documentation/docs/en/license.html" target="_blank">
-              Apache License 2.0</a> - System Runtime is part of the <a href="https://projects.ow2.org/bin/view/wiki/" target="_blank"> OW2 codebase</a> - Copyright &copy; 2019
-            <a href="https://designfirst.io/systemruntime/documentation/docs/en/who-is-behind-system-runtime.html" target="_blank">Erwan Carriou</a>
+              Apache License 2.0</a> - System Runtime is part of the <a href="https://projects.ow2.org/bin/view/wiki/"
+              target="_blank"> OW2 codebase</a> - Copyright &copy; 2019
+            <a href="https://designfirst.io/systemruntime/documentation/docs/en/who-is-behind-system-runtime.html"
+              target="_blank">Erwan Carriou</a>
           </p>
         </div>
       </div>
