@@ -1,7 +1,7 @@
 {
   "name": "System Designer",
   "short_name": "SystemDesigner",
-  "description": "System Designer, A low-code development platform for creating systems",
+  "description": "System Designer, an IDE for designing systems",
   "icons": [
     {
       "src": "img/icon.png",
