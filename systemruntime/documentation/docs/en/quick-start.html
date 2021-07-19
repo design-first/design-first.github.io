@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · System Runtime</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quick Start · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · System Runtime</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quick Start · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="In this little tutorial we will create a little system that will show an overview of what you can do with System Runtime."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
@@ -69,7 +69,7 @@
 <li>is composed by <strong>components</strong> and</li>
 <li>reacts to events with <strong>behaviors</strong>.</li>
 </ul>
-<p><img src="../../img/fa7f5de-6565096-UuhkIYCaRY6IpUFVFY7Q_system.png" alt="Image Alt"></p>
+<p><img src="../../img/quick-start-system.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="install-system-runtime"></a><a href="#install-system-runtime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install System Runtime</h2>
 <p>To install System Runtime server-side, you juste need to use npm:</p>
 <pre><code class="hljs css language-shell">npm install system-runtime --save
@@ -88,7 +88,7 @@ Then we can require System Runtime and use its APIs:</p>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="create-a-model"></a><a href="#create-a-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a model</h2>
 <p>We will create a <em>Jedi</em> class:</p>
-<p><img src="../../img/0GW9Z1mJT0q8ZTeAAvPs_Jedi.png" alt="Image Alt"></p>
+<p><img src="../../img/quick-start-model.png" alt="Image Alt"></p>
 <p>To do so, get <em>metamodel</em> component to create your model:</p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
 </code></pre>
@@ -189,7 +189,7 @@ Then add this <em>link</em> tag in your HTML to install the bundle:</p>
 </code></pre>
 <p>System Runtime will install the bundle on the load of the page. The <em>start</em> method of the system will be called when the bundle will be installed.</p>
 <p>Run the page and look at the console of your browser:</p>
-<p><img src="../../img/Ge9QsuHQTm6WpoZPMfiw_console-result.png" alt="Image Alt"></p>
+<p><img src="../../img/quick-start-console-result.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="use-system-runtime-nosql-apis"></a><a href="#use-system-runtime-nosql-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use System Runtime NoSQL APIs</h2>
 <p>Now type in the console:</p>
 <pre><code class="hljs css language-js">runtime.require(<span class="hljs-string">'db'</span>).collections().Jedi.count();
