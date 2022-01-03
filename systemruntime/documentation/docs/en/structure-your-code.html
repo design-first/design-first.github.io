@@ -4,7 +4,19 @@
             {"zIndex":100}
           )
         });
-        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/en"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/systemruntime/documentation/docs/en/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Structure your code</h1></header><article><div><span><p>When you code in System Runtime, you will need to follow these steps :</p>
+        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/en"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/systemruntime/documentation/img/language.svg" alt="Languages icon"/>ENGLISH</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/systemruntime/documentation/docs/ro-RO/structure-your-code.html">Română</a></li><li><a href="https://crowdin.com/project/system-runtime" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class=""><a href="/systemruntime/documentation/docs/en/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Structure your code</h1></header><article><div><span><p>When you code in System Runtime, you will need to follow these steps :</p>
 <ul>
 <li>step 1: create your system,</li>
 <li>step 2: create your model,</li>

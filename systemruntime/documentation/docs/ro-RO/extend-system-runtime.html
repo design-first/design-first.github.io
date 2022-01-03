@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="ro-RO"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Extend System Runtime · System Runtime</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Există multe modalităţi de a adăuga noi funcţionalităţi pe System Runtime. Pentru a face astfel încât să puteţi:"/><meta name="docsearch:language" content="ro-RO"/><meta property="og:title" content="Extend System Runtime · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="Există multe modalităţi de a adăuga noi funcţionalităţi pe System Runtime. Pentru a face astfel încât să puteţi:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/ro-RO"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/systemruntime/documentation/img/language.svg" alt="Languages icon"/>Română</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/systemruntime/documentation/docs/en/extend-system-runtime.html">ENGLISH</a></li><li><a href="https://crowdin.com/project/system-runtime" target="_blank" rel="noreferrer noopener">Ajutati-ne cu Traducerea</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="siteNavGroupActive"><a href="/systemruntime/documentation/docs/ro-RO/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ghiduri</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introducere</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/what-is-system-runtime.html">What is System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/system-runtime-architecture.html">System Runtime architecture</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/what-is-design-first.html">What is Design First ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/overview.html">Prezentare generală</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ghiduri</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-system-runtime.html">How to install System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/design-your-model.html">Design your model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-components.html">Creează componente</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/manage-your-components.html">Manage your components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/bundle-your-system.html">Bundle your system</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/extend-system-runtime.html">Extend System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/go-deeper.html">Go deeper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Exemple</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/a-basic-hello-world.html">Un elementar &#x27;&#x27;hello world&#x27;&#x27;</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-bundle.html">Create-a-bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-client-side.html">Install a bundle client-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-in-html.html">Instalează un pachet in HTML</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-server-side.html">Instalează un pachet server-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/package-a-bundle.html">Package a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-component.html">Create a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-new-types.html">Crează tipuri noi</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-one-to-one-relationship.html">Crează o relație unu la unu</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-one-to-many-relationship.html">Crează multe relații unu la unu</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/navigate-through-the-model.html">Navighează prin modele</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/inheritance-between-components.html">Inheritance between components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/listen-to-a-change-of-state-of-a-component.html">Listen to a change of state of a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-system-runtime-nosql-database.html">Use System Runtime NoSQL Database</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/object-document-mapper-in-action.html">Object-Document Mapper in action</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-system-runtime-core-apis.html">Use System Runtime core apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-history.html">Use System Runtime history apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/quick-start-example.html">Quick Start example</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">APIS</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/component-class.html">Component Clasă</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/runtime-component.html">runtime Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/metamodel-component.html">metamodel Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/logger-component.html">logger Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/db-component.html">Component db</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/history-component.html">history Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/document-collection.html">Colecție Document</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Despre</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/who-is-behind-system-runtime.html">Cine este în spatele lui System Runtime?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-runtime/ro-RO" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Extend System Runtime</h1></header><article><div><span><p>Există multe modalităţi de a adăuga noi funcţionalităţi pe System Runtime. Pentru a face astfel încât să puteţi:</p>
+<ul>
+<li>actualizaţi codul sursă,</li>
+<li>adaugă addons sau</li>
+<li>adaugă extensii.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="update-system-runtime-source-code"></a><a href="#update-system-runtime-source-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update System Runtime source code</h2>
+<h3><a class="anchor" aria-hidden="true" id="instalare"></a><a href="#instalare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instalare</h3>
+<p>To update System Runtime, you will need to <a href="https://github.com/design-first/system-runtime">clone the repository</a>:</p>
+<pre><code class="hljs css language-shell">git clone https://github.com/design-first/system-runtime.git
+</code></pre>
+<p>Once you have cloned the repository, install the dependencies:</p>
+<pre><code class="hljs css language-shell">npm i
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="mod-dezvoltare"></a><a href="#mod-dezvoltare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mod dezvoltare</h3>
+<p>Începe System Runtime în modul de dezvoltare:</p>
+<pre><code class="hljs css language-shell">npm run dev
+</code></pre>
+<p>All the modifications to the source code of System Runtime will build System Runtime core module.</p>
+<h3><a class="anchor" aria-hidden="true" id="actualizează-codul-sursă"></a><a href="#actualizează-codul-sursă" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Actualizează codul sursă</h3>
+<p>System Runtime has got a <strong>customizable core system</strong>. You can update all its components, models or behaviors to follow your needs. To do so:</p>
+<ul>
+<li>open a version of <a href="https://designfirst.io/systemdesigner/">System Designer</a>,</li>
+<li>import System Runtime core system on the <a href="https://github.com/design-first/system-runtime/tree/master/src/system">/src/system</a> directory,</li>
+<li>edit the system,</li>
+<li>export it,</li>
+<li>save it in the same place.</li>
+</ul>
+<p>Because you have changed the source code, System Runtime will be automatically rebuild in development mode.</p>
+<h3><a class="anchor" aria-hidden="true" id="build"></a><a href="#build" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build</h3>
+<p>Once you have finished all your modification, you can build System Runtime:</p>
+<pre><code class="hljs css language-shell">npm run build
+</code></pre>
+<p>O să:</p>
+<ul>
+<li>build System Runtime core module for the server library and</li>
+<li>build System Runtime client library on the <strong>/dist</strong> directory</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="adaugă-programe-de-completare"></a><a href="#adaugă-programe-de-completare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adaugă programe de completare</h2>
+<p>You can also update System Runtime core system by <strong>composing other systems with it</strong>. In that case, other systems are called <strong>addons</strong>.</p>
+<p>To compose a system with System Runtime core systems, just copy and paste a system into the <a href="https://github.com/design-first/system-runtime/tree/master/addons">/src/addons directory</a> and build System Runtime.</p>
+<h2><a class="anchor" aria-hidden="true" id="adaugă-extensii"></a><a href="#adaugă-extensii" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adaugă extensii</h2>
+<p>You can extend System Runtime core system by composing other systems at runtime. In that case, these systems are called <strong>extensions</strong>.</p>
+<p>To add an extension, just install it at runtime.</p>
+<h3><a class="anchor" aria-hidden="true" id="install-an-extension-client-side"></a><a href="#install-an-extension-client-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install an extension client-side</h3>
+<p>Trebuie doar să adăugaţi un tag link în codul HTML pentru a instala și a porni extensia:</p>
+<pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!-- install your extension --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"storage.json"</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="instalaţi-o-extensie-server-side"></a><a href="#instalaţi-o-extensie-server-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instalaţi o extensie server-side</h3>
+<p>Doar apelați la <strong>install</strong> API pentru a instala și porni extensia:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// pentru ați instala extensiile</span>
+runtime.install(<span class="hljs-string">'storage.json'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>Noi am văzut în articolul acesta:</p>
+<ul>
+<li>how to <strong>build System Runtime</strong>,</li>
+<li>how to <strong>update System Runtime source code</strong>,</li>
+<li>how to <strong>add addons</strong> and</li>
+<li>how to <strong>add extensions</strong>.</li>
+</ul>
+<p>In ultimul articol, vom <a href="go-deeper.html">merge mai adânc în folosul System Runtime</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/ro-RO/bundle-your-system.html"><span class="arrow-prev">← </span><span>Bundle your system</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/ro-RO/go-deeper.html"><span>Go deeper</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#update-system-runtime-source-code">Update System Runtime source code</a><ul class="toc-headings"><li><a href="#instalare">Instalare</a></li><li><a href="#mod-dezvoltare">Mod dezvoltare</a></li><li><a href="#actualizează-codul-sursă">Actualizează codul sursă</a></li><li><a href="#build">Build</a></li></ul></li><li><a href="#adaugă-programe-de-completare">Adaugă programe de completare</a></li><li><a href="#adaugă-extensii">Adaugă extensii</a><ul class="toc-headings"><li><a href="#install-an-extension-client-side">Install an extension client-side</a></li><li><a href="#instalaţi-o-extensie-server-side">Instalaţi o extensie server-side</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Runtime is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>
