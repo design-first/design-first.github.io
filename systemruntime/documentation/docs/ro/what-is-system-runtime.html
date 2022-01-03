@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="ro"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>What is System Runtime ? · System Runtime</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Când codezi, nu creaţi o aplicaţie, creaţi de fapt un [](https://en.wikipedia.org/wiki/Sistem). Sistem Runtime vă dă API-uri pentru a crea modelul, componente și comportamente ale sistemul dvs."/><meta name="docsearch:language" content="ro"/><meta property="og:title" content="What is System Runtime ? · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="Când codezi, nu creaţi o aplicaţie, creaţi de fapt un [](https://en.wikipedia.org/wiki/Sistem). Sistem Runtime vă dă API-uri pentru a crea modelul, componente și comportamente ale sistemul dvs."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/ro"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/systemruntime/documentation/img/language.svg" alt="Languages icon"/>Română</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/systemruntime/documentation/docs/en/what-is-system-runtime.html">ENGLISH</a></li><li><a href="https://crowdin.com/project/system-runtime" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="siteNavGroupActive siteNavItemActive"><a href="/systemruntime/documentation/docs/ro/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Introduction</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/systemruntime/documentation/docs/ro/what-is-system-runtime.html">What is System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/system-runtime-architecture.html">System Runtime architecture</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/what-is-design-first.html">What is Design First ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/overview.html">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-system-runtime.html">How to install System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/design-your-model.html">Design your model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-components.html">Create components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/manage-your-components.html">Manage your components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/bundle-your-system.html">Bundle your system</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/extend-system-runtime.html">Extend System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/go-deeper.html">Go deeper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Examples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/a-basic-hello-world.html">A basic &quot;hello world&quot;</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-bundle.html">Create a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-client-side.html">Install a bundle client-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-in-html.html">Install a bundle in HTML</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-server-side.html">Install a bundle server-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/package-a-bundle.html">Package a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-component.html">Create a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-new-types.html">Create new types</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-one-to-one-relationship.html">Create a one to one relationship</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-one-to-many-relationship.html">Create a one to many relationship</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/navigate-through-the-model.html">Navigate through the model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/inheritance-between-components.html">Inheritance between components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/listen-to-a-change-of-state-of-a-component.html">Listen to a change of state of a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-system-runtime-nosql-database.html">Use System Runtime NoSQL Database</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/object-document-mapper-in-action.html">Object-Document Mapper in action</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-system-runtime-core-apis.html">Use System Runtime core apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-history.html">Use System Runtime history apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/quick-start-example.html">Quick Start example</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">APIS</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/component-class.html">Component Class</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/runtime-component.html">runtime Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/metamodel-component.html">metamodel Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/logger-component.html">logger Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/db-component.html">db Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/history-component.html">history Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/document-collection.html">Document Collection</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/who-is-behind-system-runtime.html">Who is behind System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-runtime/ro" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">What is System Runtime ?</h1></header><article><div><span><p>Când codezi, nu creaţi o aplicaţie, creaţi de fapt un <a href="https://en.wikipedia.org/wiki/Sistem"></a>. Sistem Runtime vă dă API-uri pentru a crea modelul, componente și comportamente ale sistemul dvs.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-system-"></a><a href="#what-is-a-system-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a system ?</h2>
+<p>A system:</p>
+<ul>
+<li>este definit de un model,</li>
+<li>este compus din componente şi</li>
+<li>reacționează la evenimentele cu acțiuni care o numim comportamente..</li>
+</ul>
+<p><img src="../../img/what-is-system-runtime-system.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-system"></a><a href="#create-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a system</h2>
+<p>Utilizează API-uri ale lui System Runtime pentru a crea sistem tău:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Creaţi un sistem</span>
+<span class="hljs-keyword">let</span> system = runtime.system(<span class="hljs-string">'mysystem'</span>);
+
+<span class="hljs-regexp">/ /</span> adăuga codul metodei în startul sistemului
+system.on (<span class="hljs-string">'start'</span>, () =&gt; <span class="hljs-built_in">console</span>.log (<span class="hljs-string">"Hello world!"</span>));
+
+<span class="hljs-regexp">/ /</span> Începe sistemul dvs.
+system.start();
+</code></pre>
+<p>Acum poți împacheta sistemul tău într-un obiect JSON:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// crează un pachet</span>
+runtime.bundle();
+</code></pre>
+<p>O să returneze acest JSON:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"154cd18d0210516"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"system"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">"schemas"</span>: {},
+  <span class="hljs-attr">"models"</span>: {},
+  <span class="hljs-attr">"types"</span>: {},
+  <span class="hljs-attr">"behaviors"</span>: {
+    <span class="hljs-attr">"1ea9c1d5f811ae1"</span>: {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"1ea9c1d5f811ae1"</span>,
+      <span class="hljs-attr">"component"</span>: <span class="hljs-string">"154cd18d0210516"</span>,
+      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"start"</span>,
+      <span class="hljs-attr">"action"</span>: <span class="hljs-string">"() =&gt;&gt; console.log('Hello world !')"</span>,
+      <span class="hljs-attr">"useCoreAPI"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"core"</span>: <span class="hljs-literal">false</span>
+    }
+  },
+  <span class="hljs-attr">"components"</span>: {}
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="instalează-pachetul-in-html"></a><a href="#instalează-pachetul-in-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instalează pachetul in HTML</h2>
+<p>Trebuie doar să adăugaţi un tag link în codul HTML pentru a instala și a porni pachetul:</p>
+<pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!-- impostează-ți JSON-ul --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"system.json"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- încarcă System Runtime --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="instalează-pachetul-in-nodejs"></a><a href="#instalează-pachetul-in-nodejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instalează pachetul in Node.js</h2>
+<p>Doar apelează la <strong>install</strong> și <strong>start</strong> metode pentru a executa pachetul tău:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// trebuie System Runtime</span>
+<span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+
+<span class="hljs-comment">// instalează-ți și începe-ți sistemul</span>
+runtime.install(<span class="hljs-string">'system.json'</span>);
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/systemruntime/documentation/docs/ro/system-runtime-architecture.html"><span>System Runtime architecture</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-a-system-">What is a system ?</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#instalează-pachetul-in-html">Instalează pachetul in HTML</a></li><li><a href="#instalează-pachetul-in-nodejs">Instalează pachetul in Node.js</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Runtime is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>

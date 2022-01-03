@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="ro"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Bundle your system · System Runtime</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In System Runtime you can share the components you have created with other systems."/><meta name="docsearch:language" content="ro"/><meta property="og:title" content="Bundle your system · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="In System Runtime you can share the components you have created with other systems."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/ro"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/systemruntime/documentation/img/language.svg" alt="Languages icon"/>Română</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/systemruntime/documentation/docs/en/bundle-your-system.html">ENGLISH</a></li><li><a href="https://crowdin.com/project/system-runtime" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="siteNavGroupActive"><a href="/systemruntime/documentation/docs/ro/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/what-is-system-runtime.html">What is System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/system-runtime-architecture.html">System Runtime architecture</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/what-is-design-first.html">What is Design First ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/overview.html">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-system-runtime.html">How to install System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/design-your-model.html">Design your model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-components.html">Create components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/manage-your-components.html">Manage your components</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/systemruntime/documentation/docs/ro/bundle-your-system.html">Bundle your system</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/extend-system-runtime.html">Extend System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/go-deeper.html">Go deeper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Examples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/a-basic-hello-world.html">A basic &quot;hello world&quot;</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-bundle.html">Create a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-client-side.html">Install a bundle client-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-in-html.html">Install a bundle in HTML</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/install-a-bundle-server-side.html">Install a bundle server-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/package-a-bundle.html">Package a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-component.html">Create a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-new-types.html">Create new types</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-one-to-one-relationship.html">Create a one to one relationship</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/create-a-one-to-many-relationship.html">Create a one to many relationship</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/navigate-through-the-model.html">Navigate through the model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/inheritance-between-components.html">Inheritance between components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/listen-to-a-change-of-state-of-a-component.html">Listen to a change of state of a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-system-runtime-nosql-database.html">Use System Runtime NoSQL Database</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/object-document-mapper-in-action.html">Object-Document Mapper in action</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-system-runtime-core-apis.html">Use System Runtime core apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/use-history.html">Use System Runtime history apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/quick-start-example.html">Quick Start example</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">APIS</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/component-class.html">Component Class</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/runtime-component.html">runtime Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/metamodel-component.html">metamodel Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/logger-component.html">logger Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/db-component.html">db Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/history-component.html">history Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/document-collection.html">Document Collection</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/who-is-behind-system-runtime.html">Who is behind System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-runtime/ro" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Bundle your system</h1></header><article><div><span><p>In System Runtime you can share the components you have created with other systems.</p>
+<h2><a class="anchor" aria-hidden="true" id="system"></a><a href="#system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System</h2>
+<p>When you create an application in System Runtime, you are in fact defining a <strong>system</strong>. A system is composed of:</p>
+<ul>
+<li><strong>models</strong>: the definition of the structure of your components,</li>
+<li><strong>behaviors</strong>: the description of how your components react when their states change and</li>
+<li><strong>components</strong>: your components.</li>
+</ul>
+<p><img src="../../img/bundle-your-system-system.png" alt="Image Alt"></p>
+<p>All core components of System Runtime work in order to run your system and to check that all is compliant with the model you have defined:</p>
+<p><img src="../../img/bundle-your-system-archi.png" alt="Image Alt"></p>
+<ul>
+<li><strong>System Runtime database</strong> stores your system and the state of your component,</li>
+<li><strong>System Runtime metamodel</strong> creates your model and</li>
+<li><strong>System Runtime workflow</strong> checks that every actions of your components are compliant with your model.</li>
+</ul>
+<p>A system can also be composed of another systems. In that case the parent system, that we called the <strong>master system</strong>, shares all the models, behaviors and components of all the other systems.</p>
+<p>We will see now how System Runtime manages systems.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-system"></a><a href="#create-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a system</h2>
+<p>First you need to create a system. By default, there is no system in your application, so you have to create one in order to take advantage of System Runtime.</p>
+<p>To create your system, call method <strong>system</strong> of <em>Runtime</em> instance:</p>
+<pre><code class="hljs css language-js">runtime.system(<span class="hljs-string">'mysystem'</span>);
+</code></pre>
+<p>The method returns the <em>System</em> instance that is created. Now everything you code will be in this system.</p>
+<h2><a class="anchor" aria-hidden="true" id="structure-your-code"></a><a href="#structure-your-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structure your code</h2>
+<p>When you code in System Runtime, you have to follow these steps:</p>
+<ul>
+<li>step 1: <strong>create your system</strong>,</li>
+<li>step 2: <strong>create your model</strong>,</li>
+<li>step 3: <strong>create your components</strong>,</li>
+<li>step 4: <strong>add your components behaviors</strong>,</li>
+<li>step 5: <strong>code your system's logic</strong> in the start method of your system and</li>
+<li>step 6: <strong>run the system</strong></li>
+</ul>
+<p>By respecting these steps, you insure that System Runtime will be able to bundle your system with your start code.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// STEP 1</span>
+<span class="hljs-keyword">const</span> system = runtime.system(<span class="hljs-string">'mySystem'</span>);
+
+<span class="hljs-comment">// STEP 2</span>
+<span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+
+metamodel.schema(<span class="hljs-string">'Jedi'</span>, {
+  <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'nickname'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'father'</span>: <span class="hljs-string">'link'</span>,
+  <span class="hljs-string">'shout'</span>: <span class="hljs-string">'method'</span>
+});
+
+metamodel.create();
+
+<span class="hljs-comment">// STEP 3</span>
+<span class="hljs-keyword">const</span> Jedi = runtime.require(<span class="hljs-string">'Jedi'</span>);
+
+<span class="hljs-keyword">new</span> Jedi({
+  <span class="hljs-string">'_id'</span>: <span class="hljs-string">'anakin'</span>,
+  <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'Anakin'</span>,
+  <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'Skywalker'</span>,
+  <span class="hljs-string">'nickname'</span>: <span class="hljs-string">'Darth Vader'</span>
+});
+
+<span class="hljs-keyword">new</span> Jedi({
+  <span class="hljs-string">'_id'</span>: <span class="hljs-string">'luke'</span>,
+  <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'Luke'</span>,
+  <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'Skywalker'</span>,
+  <span class="hljs-string">'father'</span>: <span class="hljs-string">'anakin'</span>
+});
+
+<span class="hljs-comment">// STEP 4</span>
+Jedi.on(<span class="hljs-string">'shout'</span>, message =&gt; message + <span class="hljs-string">'!!'</span>);
+
+<span class="hljs-comment">// STEP 5</span>
+system.on(<span class="hljs-string">'start'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> luke = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'luke'</span>);
+
+  <span class="hljs-keyword">if</span> (luke.father().nickname() === <span class="hljs-string">'Darth Vader'</span>) {
+    <span class="hljs-built_in">console</span>.log(luke.shout(<span class="hljs-string">'NOOOOOO'</span>));
+  }
+});
+
+<span class="hljs-comment">// STEP 6</span>
+system.start();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="bundle-a-system"></a><a href="#bundle-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bundle a system</h2>
+<p>To bundle your system, you just need to call the method <strong>bundle</strong> of <em>Runtime</em> instance:</p>
+<pre><code class="hljs css language-js">runtime.bundle();
+</code></pre>
+<p>The result of the bundle will be a stringify JSON that represents your system:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"r1f6761e91912e85"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"mySystem"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">"master"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"schemas"</span>: {
+    <span class="hljs-attr">"n1d69a151891dabe"</span>: {
+      <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+      <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"property"</span>,
+      <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"property"</span>,
+      <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">"property"</span>,
+      <span class="hljs-attr">"father"</span>: <span class="hljs-string">"link"</span>,
+      <span class="hljs-attr">"shout"</span>: <span class="hljs-string">"method"</span>,
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"n1d69a151891dabe"</span>,
+      <span class="hljs-attr">"_inherit"</span>: [
+        <span class="hljs-string">"_Component"</span>
+      ]
+    }
+  },
+  <span class="hljs-attr">"models"</span>: {},
+  <span class="hljs-attr">"types"</span>: {},
+  <span class="hljs-attr">"behaviors"</span>: {
+    <span class="hljs-attr">"w10c7d1e4301e137"</span>: {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"w10c7d1e4301e137"</span>,
+      <span class="hljs-attr">"component"</span>: <span class="hljs-string">"Jedi"</span>,
+      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"shout"</span>,
+      <span class="hljs-attr">"action"</span>: <span class="hljs-string">"(message) =&gt; message + '!!'"</span>,
+      <span class="hljs-attr">"useCoreAPI"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"core"</span>: <span class="hljs-literal">false</span>
+    },
+    <span class="hljs-attr">"g140591769d11852"</span>: {
+      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"g140591769d11852"</span>,
+      <span class="hljs-attr">"component"</span>: <span class="hljs-string">"r1f6761e91912e85"</span>,
+      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"start"</span>,
+      <span class="hljs-attr">"action"</span>: <span class="hljs-string">"() =&gt; {\n  const luke = this.require('luke');\n\n  if (luke.father().nickname() === 'Darth Vader') {\n    console.log(luke.shout('NOOOOOO'));\n  }\n}"</span>,
+      <span class="hljs-attr">"useCoreAPI"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"core"</span>: <span class="hljs-literal">false</span>
+    }
+  },
+  <span class="hljs-attr">"components"</span>: {
+    <span class="hljs-attr">"Jedi"</span>: {
+      <span class="hljs-attr">"anakin"</span>: {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"anakin"</span>,
+        <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Anakin"</span>,
+        <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Skywalker"</span>,
+        <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">"Darth Vader"</span>,
+        <span class="hljs-attr">"father"</span>: <span class="hljs-string">""</span>
+      },
+      <span class="hljs-attr">"luke"</span>: {
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"luke"</span>,
+        <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Luke"</span>,
+        <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Skywalker"</span>,
+        <span class="hljs-attr">"father"</span>: <span class="hljs-string">"anakin"</span>,
+        <span class="hljs-attr">"nickname"</span>: <span class="hljs-string">""</span>
+      }
+    }
+  }
+}
+</code></pre>
+<p>As you see, the result contains:</p>
+<ul>
+<li><strong>schemas</strong> property that contains all the schemas of the bundled system,</li>
+<li><strong>models</strong> property that contains all the models of the bundled system,</li>
+<li><strong>types</strong> property that contains all the types of the bundled system,</li>
+<li><strong>components</strong> property that contains all the components of the bundled system and</li>
+<li><strong>behaviors</strong> property that contains all the behaviors of the bundled system.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="install-a-bundle"></a><a href="#install-a-bundle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle</h2>
+<p>Now that we have bundled our system, we want to install it. There are many ways to do it.</p>
+<h2><a class="anchor" aria-hidden="true" id="install-a-bundle-server-side"></a><a href="#install-a-bundle-server-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle server-side</h2>
+<p>To install a bundle server-side, just call the method <strong>install</strong> of <em>Runtime</em> instance and pass the name of your system as parameter.</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// install and start the system</span>
+runtime.install(<span class="hljs-string">'mysystem.json'</span>);
+</code></pre>
+<blockquote>
+<p><strong>System Runtime and OSGi</strong></p>
+<p>These APIs are <a href="https://www.osgi.org">OSGI</a> compliant.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="install-a-bundle-client-side-with-javascript"></a><a href="#install-a-bundle-client-side-with-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle client-side with JavaScript</h2>
+<p>To install a bundle client-side:</p>
+<pre><code class="hljs css language-js">runtime.install(<span class="hljs-string">'mysystem.json'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="install-a-bundle-client-side-with-html"></a><a href="#install-a-bundle-client-side-with-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install a bundle client-side with HTML</h2>
+<p>To do so, save the bundled system in a JSON file and then install it with a <em>link</em> tag. The <em>start</em> method of the system will be called when the system will be imported.</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mysystem.json"</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="package-a-bundle"></a><a href="#package-a-bundle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Package a bundle</h2>
+<p>Packaging a bundle means to compose a system with System Runtime core systems. By doing that System Runtime library will include your system (i.e. your code will be include in <em>system-runtime.min.js</em> file).</p>
+<p>You can package your system with System Runtime. To do so you need first to <a href="https://github.com/design-first/system-runtime">clone the repository</a>.</p>
+<p>Save the bundled system in a JSON file and put it on the <a href="https://github.com/design-first/system-runtime/tree/master/addons">addons directory of System Runtime</a>.</p>
+<p>Then build System Runtime with :</p>
+<pre><code class="hljs css language-shell">npm run build
+</code></pre>
+<p>The system will be automatically composed in <em>System Runtime core system</em> and System Runtime will execute the start function of the imported system when <em>ready</em>.</p>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>Noi am văzut în articolul acesta:</p>
+<ul>
+<li><strong>System Runtime architecture is constructed around systems</strong>,</li>
+<li><strong>your application is a system</strong>, that can be a superset of other systems,</li>
+<li>you can <strong>bundle a systems</strong>,</li>
+<li>you can <strong>install/compose systems</strong> with another.</li>
+</ul>
+<p>In a next article we will discuss on <a href="extend-system-runtime.html">how to extend System Runtime</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/ro/manage-your-components.html"><span class="arrow-prev">← </span><span>Manage your components</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/ro/extend-system-runtime.html"><span>Extend System Runtime</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system">System</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#structure-your-code">Structure your code</a></li><li><a href="#bundle-a-system">Bundle a system</a></li><li><a href="#install-a-bundle">Install a bundle</a></li><li><a href="#install-a-bundle-server-side">Install a bundle server-side</a></li><li><a href="#install-a-bundle-client-side-with-javascript">Install a bundle client-side with JavaScript</a></li><li><a href="#install-a-bundle-client-side-with-html">Install a bundle client-side with HTML</a></li><li><a href="#package-a-bundle">Package a bundle</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Runtime is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>
