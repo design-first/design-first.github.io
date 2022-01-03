@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="ro-RO"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Design your model · System Runtime</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Designing a model in System Runtime is very simple, you do not have to code but just to define your model in a human readable format called **MSON**."/><meta name="docsearch:language" content="ro-RO"/><meta property="og:title" content="Design your model · System Runtime"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io/systemruntime/documentation/index.html"/><meta property="og:description" content="Designing a model in System Runtime is very simple, you do not have to code but just to define your model in a human readable format called **MSON**."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/systemruntime/documentation/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../../js/links-website.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/systemruntime/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/systemruntime/documentation/css/main.css"/><script src="/systemruntime/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/systemruntime/documentation/ro-RO"><img class="logo" src="/systemruntime/documentation/img/logo.png" alt="System Runtime"/><h2 class="headerTitleWithLogo">System Runtime</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/systemruntime/documentation/img/language.svg" alt="Languages icon"/>Română</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/systemruntime/documentation/docs/en/design-your-model.html">ENGLISH</a></li><li><a href="https://crowdin.com/project/system-runtime" target="_blank" rel="noreferrer noopener">Ajutati-ne cu Traducerea</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="siteNavGroupActive"><a href="/systemruntime/documentation/docs/ro-RO/what-is-system-runtime.html" target="_self">DOCUMENTATION</a></li><li class=""><a href="https://github.com/design-first/system-runtime/issues" target="_self">SUPPORT</a></li><li class=""><a href="https://github.com/design-first/system-runtime" target="_self">GITHUB</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ghiduri</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introducere</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/what-is-system-runtime.html">What is System Runtime ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/system-runtime-architecture.html">System Runtime architecture</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/what-is-design-first.html">What is Design First ?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/overview.html">Prezentare generală</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ghiduri</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-system-runtime.html">How to install System Runtime</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/design-your-model.html">Design your model</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-components.html">Creează componente</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/manage-your-components.html">Manage your components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/bundle-your-system.html">Bundle your system</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/extend-system-runtime.html">Extend System Runtime</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/go-deeper.html">Go deeper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Exemple</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/a-basic-hello-world.html">Un elementar &#x27;&#x27;hello world&#x27;&#x27;</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-bundle.html">Create-a-bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-client-side.html">Install a bundle client-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-in-html.html">Instalează un pachet in HTML</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/install-a-bundle-server-side.html">Instalează un pachet server-side</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/package-a-bundle.html">Package a bundle</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-component.html">Create a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-new-types.html">Crează tipuri noi</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-one-to-one-relationship.html">Crează o relație unu la unu</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/create-a-one-to-many-relationship.html">Crează multe relații unu la unu</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/navigate-through-the-model.html">Navighează prin modele</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/inheritance-between-components.html">Inheritance between components</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/listen-to-a-change-of-state-of-a-component.html">Listen to a change of state of a component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-system-runtime-nosql-database.html">Use System Runtime NoSQL Database</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/object-document-mapper-in-action.html">Object-Document Mapper in action</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-system-runtime-core-apis.html">Use System Runtime core apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/use-history.html">Use System Runtime history apis</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/quick-start-example.html">Quick Start example</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">APIS</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/component-class.html">Component Clasă</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/runtime-component.html">runtime Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/metamodel-component.html">metamodel Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/logger-component.html">logger Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/db-component.html">Component db</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/history-component.html">history Component</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/document-collection.html">Colecție Document</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Despre</h3><ul class=""><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/who-is-behind-system-runtime.html">Cine este în spatele lui System Runtime?</a></li><li class="navListItem"><a class="navItem" href="/systemruntime/documentation/docs/ro-RO/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-runtime/ro-RO" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Design your model</h1></header><article><div><span><p>Designing a model in System Runtime is very simple, you do not have to code but just to define your model in a human readable format called <strong>MSON</strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="defining-your-model"></a><a href="#defining-your-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining your model</h2>
+<p>What is MSON? MSON stands for <strong>Metamodel JavaScript Object Notation</strong>, it is a human readable format based on <a href="https://json.org">JSON</a> that will help you to define your model.</p>
+<p>For example, let's say we want to create the Person model:</p>
+<p><img src="../../img/design-your-model-person.png" alt="Image Alt"></p>
+<p>To define this model in MSON, we have to write something like that:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"property"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"property"</span>,
+  <span class="hljs-attr">"age"</span>: <span class="hljs-string">"property"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"link"</span>,
+  <span class="hljs-attr">"mother"</span>: <span class="hljs-string">"link"</span>,
+  <span class="hljs-attr">"children"</span>: <span class="hljs-string">"collection"</span>,
+  <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"method"</span>
+}
+</code></pre>
+<p>As you see, MSON is in fact a <strong>schema</strong>, a definition of a structure of an object. It shows what will be the <strong>properties</strong>, <strong>links</strong>, <strong>collections</strong>, <strong>methods</strong> and <strong>events</strong> of your model.</p>
+<p>In our example:</p>
+<ul>
+<li><em>firstName</em>, <em>lastName</em> and <em>age</em> are the properties of the model, that is why they have <strong>property</strong> values</li>
+<li><em>father</em> and <em>mother</em> are links to another component, that is why they have <strong>link</strong> values,</li>
+<li><em>children</em> is a collection of components, that is why it has <strong>collection</strong> values and</li>
+<li><em>fullName</em> is a method of the model, that is why it has <strong>method</strong> value.</li>
+</ul>
+<p>In System Runtime, <strong>the schema is used to generated the model</strong> that contains the default type of each property.</p>
+<p>Based on the schema we wrote, the generated model will look like this:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"any"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"any"</span>,
+  <span class="hljs-attr">"age"</span>: <span class="hljs-string">"any"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"_Component"</span>,
+  <span class="hljs-attr">"mother"</span>: <span class="hljs-string">"_Component"</span>,
+  <span class="hljs-attr">"children"</span>: [<span class="hljs-string">"_Component"</span>],
+  <span class="hljs-attr">"fullName"</span>: {
+    <span class="hljs-attr">"param1"</span>: <span class="hljs-string">"any"</span>,
+    <span class="hljs-attr">"param2"</span>: <span class="hljs-string">"any"</span>,
+    <span class="hljs-attr">"param3"</span>: <span class="hljs-string">"any"</span>,
+    <span class="hljs-attr">"=&gt;"</span>: <span class="hljs-string">"any"</span>
+  }
+}
+</code></pre>
+<p>By default:</p>
+<ul>
+<li>all properties have <strong>any</strong> type, which means that they can have any value.</li>
+<li>all links have <strong>_Component</strong> type, which means that any component can be a link.</li>
+<li>all collection have <strong>[_Component]</strong> type, which means that any component can be in that collection.</li>
+<li>methods have 3 parameters that can have <strong>any</strong> value, they also return <strong>any</strong> type.</li>
+</ul>
+<blockquote>
+<p>By default, any model inherits from <strong>_Component</strong>.</p>
+</blockquote>
+<p>But, in our example:</p>
+<ul>
+<li><strong>firstName</strong>, <strong>lastName</strong> are <em>string</em>,</li>
+<li><strong>age</strong> is a <em>number</em>,</li>
+<li><strong>father</strong>, <strong>mother</strong> are <em>Person</em> links,</li>
+<li><strong>collection</strong> is a <em>Person</em> collection and</li>
+<li><strong>fullName</strong> is a method with no parameter and returns a string value.</li>
+</ul>
+<p>So we need to override these values. To do so, we have to create a new MSON to override the generated model.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"age"</span>: <span class="hljs-string">"number"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"Person"</span>,
+  <span class="hljs-attr">"mother"</span>: <span class="hljs-string">"Person"</span>,
+  <span class="hljs-attr">"children"</span>: [<span class="hljs-string">"Person"</span>],
+  <span class="hljs-attr">"fullName"</span>: {
+    <span class="hljs-attr">"=&gt;"</span>: <span class="hljs-string">"string"</span>
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>What kind of types can we use ?</strong></p>
+<p>System Runtime manages the following types: <strong>boolean</strong>, <strong>string</strong>, <strong>number</strong>, <strong>object</strong>, <strong>array</strong>, <strong>date</strong> and <strong>any</strong>. You can also create your own type.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="loading-your-model"></a><a href="#loading-your-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loading your model</h2>
+<p>Once you have designed your model, you need to tell System Runtime to load it. To do so:</p>
+<ul>
+<li>get <em>System Runtime metamodel</em> instance with <strong>runtime.require</strong> (System Runtime manages its own module system),</li>
+<li>add your schemas files by calling its <strong>schema</strong> method</li>
+<li>override your model files by calling its <strong>model</strong> method and</li>
+<li>call <strong>create</strong> method to create the model.</li>
+</ul>
+<p>Load a model with System Runtime metamodel:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// get System Runtime metamodel instance</span>
+<span class="hljs-keyword">const</span> metamodel = runtime.require(<span class="hljs-string">'metamodel'</span>);
+
+<span class="hljs-comment">// create the schema</span>
+metamodel.schema(<span class="hljs-string">'Person'</span>, {
+  <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'age'</span>: <span class="hljs-string">'property'</span>,
+  <span class="hljs-string">'father'</span>: <span class="hljs-string">'link'</span>,
+  <span class="hljs-string">'mother'</span>: <span class="hljs-string">'link'</span>,
+  <span class="hljs-string">'children'</span>: <span class="hljs-string">'collection'</span>,
+  <span class="hljs-string">'fullName'</span>: <span class="hljs-string">'method'</span>
+});
+
+<span class="hljs-comment">// override the generated model</span>
+metamodel.model(<span class="hljs-string">'Person'</span>, {
+  <span class="hljs-string">'firstName'</span>: <span class="hljs-string">'string'</span>,
+  <span class="hljs-string">'lastName'</span>: <span class="hljs-string">'string'</span>,
+  <span class="hljs-string">'age'</span>: <span class="hljs-string">'number'</span>,
+  <span class="hljs-string">'father'</span>: <span class="hljs-string">'Person'</span>,
+  <span class="hljs-string">'mother'</span>: <span class="hljs-string">'Person'</span>,
+  <span class="hljs-string">'children'</span>: [<span class="hljs-string">'Person'</span>],
+  <span class="hljs-string">'fullName'</span>: {
+    <span class="hljs-string">'=&gt;'</span>: <span class="hljs-string">'string'</span>
+  }
+});
+
+<span class="hljs-comment">// create the model and related class</span>
+metamodel.create();
+</code></pre>
+<p>Once your model is created, you will be able to get the classes of your model and create components based on your model.</p>
+<h2><a class="anchor" aria-hidden="true" id="defining-new-types"></a><a href="#defining-new-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining new types</h2>
+<p>In System Runtime you can create your own types very easily.</p>
+<p>Let's say we want to create a <em>country</em> type that is an enumeration type that contains a list of country. To do so we have juste to call the <strong>type</strong> method of <em>metamodel</em> instance:</p>
+<pre><code class="hljs css language-js">metamodel.type(<span class="hljs-string">'country'</span>, [<span class="hljs-string">'France'</span>, <span class="hljs-string">'Belgique'</span>, <span class="hljs-string">'Luxembourg'</span>])
+</code></pre>
+<p>Now, let's say we want to create an <em>address</em> type that contains 2 properties, <em>city</em> and <em>country</em>. We need again to call the <strong>type</strong> method of <em>metamodel</em> instance:</p>
+<pre><code class="hljs css language-js">metamodel.type(<span class="hljs-string">'address'</span>, {
+  <span class="hljs-string">'city'</span>: <span class="hljs-string">'string'</span>,
+  <span class="hljs-string">'country'</span>: <span class="hljs-string">'country'</span>
+})
+</code></pre>
+<p>In this example, we set country property with <em>country</em> type. Now we can use <em>address</em> type in our model to define an address.</p>
+<h2><a class="anchor" aria-hidden="true" id="design-first-then-code"></a><a href="#design-first-then-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design first, then code</h2>
+<p>System Runtime uses MSON files as the entry point of your system. You can not do anything without these files. So think well on how you will design your system.</p>
+<h2><a class="anchor" aria-hidden="true" id="conclusion"></a><a href="#conclusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>In this article, we saw that:</p>
+<ul>
+<li><strong>models in System Runtime are defined with MSON</strong>, a format to create schemas,</li>
+<li>models are generated based on these schemas definition,</li>
+<li>you can override these generated models and</li>
+<li>you can create new types.</li>
+</ul>
+<p>In a next article, we will introduce you how System Runtime uses these schemas to <a href="create-components.html">create components</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemruntime/documentation/docs/ro-RO/install-system-runtime.html"><span class="arrow-prev">← </span><span>How to install System Runtime</span></a><a class="docs-next button" href="/systemruntime/documentation/docs/ro-RO/create-components.html"><span>Creează componente</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#defining-your-model">Defining your model</a></li><li><a href="#loading-your-model">Loading your model</a></li><li><a href="#defining-new-types">Defining new types</a></li><li><a href="#design-first-then-code">Design first, then code</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Runtime is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>
