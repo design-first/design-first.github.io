@@ -97,6 +97,8 @@
 <li>you can now edit the configuration of the type:</li>
 </ul>
 <p><img src="../../img/create-a-type-edit.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-configuration"></a><a href="#what-is-a-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a configuration?</h2>
+<p>A configuration is an object in which you declare the properties of your type.</p>
 <h2><a class="anchor" aria-hidden="true" id="define-an-enumeration"></a><a href="#define-an-enumeration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an enumeration</h2>
 <p>To define an enumeration click on the <em>Enumeration</em> checkbox when creating a type. Then set the <em>type</em> of your enumeration (it is <em>any</em> by default) and add all the value of your enumeration in the <em>value</em> array.</p>
 <pre><code class="hljs css language-json">{
@@ -118,7 +120,7 @@
 <li><strong>_id : string</strong>, unique id of the enumeration.</li>
 <li><strong>name : string</strong>, name of the enumeration.</li>
 <li><strong>description : string</strong>, comments about the enumeration.</li>
-<li><strong>type : string|array</strong>, the type of the enumeration.</li>
+<li><strong>type : string</strong>, the type of the enumeration.</li>
 <li><strong>value : array</strong>, possible values of the enumeration.</li>
 </ul>
 <blockquote>
@@ -202,7 +204,7 @@ luke.eyeColor(<span class="hljs-string">'maroon'</span>);
 <li><strong>name : string</strong>, name of the structure.</li>
 <li><strong>description : string</strong>, comments about the structure.</li>
 <li><strong>type : string|array</strong>, the type of the structure. Must be object.</li>
-<li><strong>schema : array</strong>, the properties of the structure. A property is defined by a configuration object that has for properties:
+<li><strong>schema : object</strong>, the properties of the structure. A property is defined by a configuration object that has for properties:
 <ul>
 <li><strong>type : string|array</strong>, the type of the property.</li>
 <li><strong>mandatory : boolean</strong>, <em>true</em> if the property is mandatory.</li>
@@ -257,7 +259,7 @@ luke.location().country();
 <span class="hljs-comment">// set the country of luke component</span>
 luke.location().country(<span class="hljs-string">'Tatooine'</span>);
 </code></pre>
-<p>In this example <em>location</em> has <em>address</em> type. Because it has got a <em>city</em> property, we can get and set its values with APIs.</p>
+<p>In this example <em>location</em> has <em>address</em> type. Because it has got a <em>country</em> property we can get and set its values with APIs.</p>
 <h2><a class="anchor" aria-hidden="true" id="define-an-alias"></a><a href="#define-an-alias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an alias</h2>
 <p>To organize your type you can define an alias for a type. To do that just set the <em>type</em> information with the corresponding type.</p>
 <pre><code class="hljs css language-json">{
@@ -281,4 +283,4 @@ luke.location().country(<span class="hljs-string">'Tatooine'</span>);
   }
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemdesigner/documentation/docs/en/create-a-behavior.html"><span class="arrow-prev">← </span><span>Create a Behavior</span></a><a class="docs-next button" href="/systemdesigner/documentation/docs/en/create-a-component.html"><span>Create a Component</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-type">Create a type</a></li><li><a href="#update-a-type">Update a type</a></li><li><a href="#define-an-enumeration">Define an enumeration</a></li><li><a href="#use-an-enumeration-in-the-model">Use an enumeration in the model</a></li><li><a href="#use-an-enumeration-in-a-component">Use an enumeration in a component</a></li><li><a href="#use-an-enumeration-in-the-code">Use an enumeration in the code</a></li><li><a href="#define-a-structure">Define a structure</a></li><li><a href="#use-a-structure-in-the-model">Use a structure in the model</a></li><li><a href="#use-a-structure-in-a-component">Use a structure in a component</a></li><li><a href="#use-a-structure-in-the-code">Use a structure in the code</a></li><li><a href="#define-an-alias">Define an alias</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/systemdesigner/documentation/docs/en/create-a-behavior.html"><span class="arrow-prev">← </span><span>Create a Behavior</span></a><a class="docs-next button" href="/systemdesigner/documentation/docs/en/create-a-component.html"><span>Create a Component</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-type">Create a type</a></li><li><a href="#update-a-type">Update a type</a></li><li><a href="#what-is-a-configuration">What is a configuration?</a></li><li><a href="#define-an-enumeration">Define an enumeration</a></li><li><a href="#use-an-enumeration-in-the-model">Use an enumeration in the model</a></li><li><a href="#use-an-enumeration-in-a-component">Use an enumeration in a component</a></li><li><a href="#use-an-enumeration-in-the-code">Use an enumeration in the code</a></li><li><a href="#define-a-structure">Define a structure</a></li><li><a href="#use-a-structure-in-the-model">Use a structure in the model</a></li><li><a href="#use-a-structure-in-a-component">Use a structure in a component</a></li><li><a href="#use-a-structure-in-the-code">Use a structure in the code</a></li><li><a href="#define-an-alias">Define an alias</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2022 Erwan Carriou</section></footer></div></body></html>
