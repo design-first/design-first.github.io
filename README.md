@@ -6,7 +6,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2013-2022 Blackrock Digital LLC.
+Copyright (c) 2013-2023 Blackrock Digital LLC.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -52,7 +52,7 @@ THE SOFTWARE.
 
 ### System Designer
 
-Copyright © 2022 Erwan Carriou
+Copyright © 2023 Erwan Carriou
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
